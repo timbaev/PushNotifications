@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DD42550214E6C1DA744C066 /* Pods_OutSideInsidePushNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */; };
 		7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC194D2067F21300B38ACE /* AppDelegate.swift */; };
-		7CAC19502067F21300B38ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC194F2067F21300B38ACE /* ViewController.swift */; };
 		7CAC19532067F21300B38ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19512067F21300B38ACE /* Main.storyboard */; };
 		7CAC19552067F21300B38ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19542067F21300B38ACE /* Assets.xcassets */; };
 		7CAC19582067F21300B38ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19562067F21300B38ACE /* LaunchScreen.storyboard */; };
+		CB2428782069962D00261482 /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2428772069962D00261482 /* ModuleInput.swift */; };
+		CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24287A2069964700261482 /* ModuleInputHolder.swift */; };
+		CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */; };
+		CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */; };
+		CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF8206938390067F3C2 /* ReusableView.swift */; };
+		CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF9206938390067F3C2 /* Storyboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C65C46194CBD53A7DBFD1FD /* Pods-OutSideInsidePushNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.debug.xcconfig"; sourceTree = "<group>"; };
 		7CAC194A2067F21300B38ACE /* OutSideInsidePushNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutSideInsidePushNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAC194D2067F21300B38ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CAC194F2067F21300B38ACE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CAC19522067F21300B38ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CAC19542067F21300B38ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CAC19572067F21300B38ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CAC19592067F21300B38ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2428772069962D00261482 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
+		CB24287A2069964700261482 /* ModuleInputHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInputHolder.swift; sourceTree = "<group>"; };
+		CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactoryImpl.swift; sourceTree = "<group>"; };
+		CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactory.swift; sourceTree = "<group>"; };
+		CB640AF8206938390067F3C2 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		CB640AF9206938390067F3C2 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
+		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD42550214E6C1DA744C066 /* Pods_OutSideInsidePushNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */,
 				7CAC194B2067F21300B38ACE /* Products */,
+				CFDE61CFFB4266C4F1254880 /* Pods */,
+				7E037F954097C07000BA2F88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,84 @@
 		7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				CB640AF1206937370067F3C2 /* Helpers */,
+				CB640AF0206936E00067F3C2 /* Modules */,
+				CB640AEE206936A10067F3C2 /* Commons */,
+			);
+			path = OutSideInsidePushNotifications;
+			sourceTree = "<group>";
+		};
+		7E037F954097C07000BA2F88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB2428762069961200261482 /* ModuleInput */ = {
+			isa = PBXGroup;
+			children = (
+				CB2428772069962D00261482 /* ModuleInput.swift */,
+				CB24287A2069964700261482 /* ModuleInputHolder.swift */,
+			);
+			path = ModuleInput;
+			sourceTree = "<group>";
+		};
+		CB640AEE206936A10067F3C2 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
 				7CAC194D2067F21300B38ACE /* AppDelegate.swift */,
-				7CAC194F2067F21300B38ACE /* ViewController.swift */,
 				7CAC19512067F21300B38ACE /* Main.storyboard */,
 				7CAC19542067F21300B38ACE /* Assets.xcassets */,
 				7CAC19562067F21300B38ACE /* LaunchScreen.storyboard */,
 				7CAC19592067F21300B38ACE /* Info.plist */,
 			);
-			path = OutSideInsidePushNotifications;
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		CB640AF0206936E00067F3C2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CB640AF1206937370067F3C2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB2428762069961200261482 /* ModuleInput */,
+				CB640AF7206937F50067F3C2 /* Storyboard */,
+				CB640AF22069377F0067F3C2 /* AlertsFactory */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CB640AF22069377F0067F3C2 /* AlertsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */,
+				CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */,
+			);
+			path = AlertsFactory;
+			sourceTree = "<group>";
+		};
+		CB640AF7206937F50067F3C2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CB640AF8206938390067F3C2 /* ReusableView.swift */,
+				CB640AF9206938390067F3C2 /* Storyboards.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CFDE61CFFB4266C4F1254880 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C65C46194CBD53A7DBFD1FD /* Pods-OutSideInsidePushNotifications.debug.xcconfig */,
+				CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CAC195C2067F21300B38ACE /* Build configuration list for PBXNativeTarget "OutSideInsidePushNotifications" */;
 			buildPhases = (
+				37F465282443CA0D7B4FECD6 /* [CP] Check Pods Manifest.lock */,
 				7CAC19462067F21300B38ACE /* Sources */,
 				7CAC19472067F21300B38ACE /* Frameworks */,
 				7CAC19482067F21300B38ACE /* Resources */,
+				6CCB9A9E8ED99C4B642B158C /* [CP] Embed Pods Frameworks */,
+				BA5E1F768A27528F2DB86658 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +186,7 @@
 				TargetAttributes = {
 					7CAC19492067F21300B38ACE = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -131,13 +221,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37F465282443CA0D7B4FECD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutSideInsidePushNotifications-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CCB9A9E8ED99C4B642B158C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA5E1F768A27528F2DB86658 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CAC19462067F21300B38ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CAC19502067F21300B38ACE /* ViewController.swift in Sources */,
+				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
+				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
+				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
+				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
+				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
+				CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +421,17 @@
 		};
 		7CAC195D2067F21300B38ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C65C46194CBD53A7DBFD1FD /* Pods-OutSideInsidePushNotifications.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
-				INFOPLIST_FILE = OutSideInsidePushNotifications/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOSLab.OutSideInsidePushNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf0c2429-561b-4052-973d-61318c1696a3";
+				PROVISIONING_PROFILE_SPECIFIER = "Push Notifications TimDam";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,14 +439,17 @@
 		};
 		7CAC195E2067F21300B38ACE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
-				INFOPLIST_FILE = OutSideInsidePushNotifications/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = iOSLab.OutSideInsidePushNotifications;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf0c2429-561b-4052-973d-61318c1696a3";
+				PROVISIONING_PROFILE_SPECIFIER = "Push Notifications TimDam";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
