@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+/// Helper to provide to module input class
+protocol ModuleInputHolder {
+    
+    var moduleInput: ModuleInput? { get }
+    
+}

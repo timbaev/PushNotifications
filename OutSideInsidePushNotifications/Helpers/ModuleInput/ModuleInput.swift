@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+/// Send data through this protocol
+protocol ModuleInput: class {
+    
+    /// Setting data to input module
+    ///
+    /// - Parameter data: anything data
+    func setData(_ data: Any?)
+    
+}

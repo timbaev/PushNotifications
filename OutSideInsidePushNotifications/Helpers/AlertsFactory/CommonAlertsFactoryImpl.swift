@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommonAlertsFactory: CommonAlertsFactoryProtocol {
+class CommonAlertsFactoryImpl: CommonAlertsFactoryProtocol {
     
     private let errorTitle = "Ошибка"
     private let okButtonText = "OK"
