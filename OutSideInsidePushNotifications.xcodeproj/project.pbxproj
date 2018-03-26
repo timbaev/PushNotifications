@@ -14,6 +14,8 @@
 		7CAC19582067F21300B38ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19562067F21300B38ACE /* LaunchScreen.storyboard */; };
 		CB2428782069962D00261482 /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2428772069962D00261482 /* ModuleInput.swift */; };
 		CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24287A2069964700261482 /* ModuleInputHolder.swift */; };
+		CB24287E20699ABD00261482 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24287D20699ABD00261482 /* NotificationView.swift */; };
+		CB24288020699ACF00261482 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB24287F20699ACF00261482 /* NotificationView.xib */; };
 		CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */; };
 		CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */; };
 		CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB640AF8206938390067F3C2 /* ReusableView.swift */; };
@@ -30,6 +32,8 @@
 		7CAC19592067F21300B38ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2428772069962D00261482 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
 		CB24287A2069964700261482 /* ModuleInputHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInputHolder.swift; sourceTree = "<group>"; };
+		CB24287D20699ABD00261482 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		CB24287F20699ACF00261482 /* NotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
 		CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactoryImpl.swift; sourceTree = "<group>"; };
 		CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactory.swift; sourceTree = "<group>"; };
 		CB640AF8206938390067F3C2 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 			path = ModuleInput;
 			sourceTree = "<group>";
 		};
+		CB24287C20699A8E00261482 /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				CB24287D20699ABD00261482 /* NotificationView.swift */,
+				CB24287F20699ACF00261482 /* NotificationView.xib */,
+			);
+			path = NotificationView;
+			sourceTree = "<group>";
+		};
 		CB640AEE206936A10067F3C2 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		CB640AF1206937370067F3C2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB24287C20699A8E00261482 /* NotificationView */,
 				CB2428762069961200261482 /* ModuleInput */,
 				CB640AF7206937F50067F3C2 /* Storyboard */,
 				CB640AF22069377F0067F3C2 /* AlertsFactory */,
@@ -216,6 +230,7 @@
 				7CAC19582067F21300B38ACE /* LaunchScreen.storyboard in Resources */,
 				7CAC19552067F21300B38ACE /* Assets.xcassets in Resources */,
 				7CAC19532067F21300B38ACE /* Main.storyboard in Resources */,
+				CB24288020699ACF00261482 /* NotificationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +298,7 @@
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
 				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
 				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
+				CB24287E20699ABD00261482 /* NotificationView.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,

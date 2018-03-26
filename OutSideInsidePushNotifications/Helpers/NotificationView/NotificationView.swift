@@ -1,0 +1,74 @@
+//
+//  NotificationView.swift
+//  OutSideInsidePushNotifications
+//
+//  Created by Тимур Шафигуллин on 27.03.18.
+//  Copyright © 2018 iOSLab. All rights reserved.
+//
+
+import UIKit
+
+class NotificationView: UIView {
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    private let defaultHeight: CGFloat = 100
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    init(width: CGFloat) {
+        super.init(frame: CGRect(x: 0, y: -defaultHeight, width: width, height: defaultHeight))
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        Bundle.main.loadNibNamed("NotificationView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSwipeGesture()
+    }
+    
+    private func addSwipeGesture() {
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(onSwipped(gesture:)))
+        swipeUp.direction = .up
+        contentView.addGestureRecognizer(swipeUp)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(gesture:)))
+        contentView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func handleTap(gesture: UIGestureRecognizer) {
+        //Do something
+        hideAnimate()
+    }
+    
+    @objc private func onSwipped(gesture: UIGestureRecognizer) {
+        hideAnimate()
+    }
+    
+    private func hideAnimate() {
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.frame.origin.y -= strongSelf.defaultHeight
+        }
+    }
+    
+    func showAnimate() {
+        UIView.animate(withDuration: 0.5, delay: 1, options: .curveEaseOut, animations: { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.frame.origin.y += strongSelf.defaultHeight
+        }, completion: nil)
+    }
+
+}
