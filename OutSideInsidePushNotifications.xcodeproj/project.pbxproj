@@ -36,6 +36,7 @@
 		CB640AF9206938390067F3C2 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD25DBA206AFF0F00F8577F /* OutSideInsidePushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutSideInsidePushNotifications.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				FFD25DBA206AFF0F00F8577F /* OutSideInsidePushNotifications.entitlements */,
 				CB640AF1206937370067F3C2 /* Helpers */,
 				CB640AF0206936E00067F3C2 /* Modules */,
 				CB640AEE206936A10067F3C2 /* Commons */,
@@ -187,6 +189,14 @@
 					7CAC19492067F21300B38ACE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -424,6 +434,7 @@
 			baseConfigurationReference = 0C65C46194CBD53A7DBFD1FD /* Pods-OutSideInsidePushNotifications.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OutSideInsidePushNotifications/OutSideInsidePushNotifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
 				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";
@@ -442,6 +453,7 @@
 			baseConfigurationReference = CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OutSideInsidePushNotifications/OutSideInsidePushNotifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
 				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";

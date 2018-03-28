@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        registerForNotifications()
+        
+        if let option = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: Any], let data = option["aps"] {
+            // здесь обработка того, что будет по нажатию на пуш уведомление
+            print ("data: \(data)")
+        }
+        
         return true
     }
 
@@ -41,6 +49,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Push notifications
+
+    func registerForNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { [weak self] (isRegistred, error) in
+
+            guard let strongSelf = self else { return }
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+
+            strongSelf.getPushNotificationsConfigurations()
+        }
+    }
+
+    func getPushNotificationsConfigurations() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+
+            guard settings.authorizationStatus == .authorized else { return }
+
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+
+    
+    // Обработка нажатия пуш уведомлений если приложение было открыто
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+         // здесь обработка того, что будет по нажатию на пуш уведомление
+        let dataInfo = userInfo as! [String: Any]
+        print("Data: \(String(describing: dataInfo["aps"]))")
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+        print("Failed to register push notifications")
+    }
 
 }
 
