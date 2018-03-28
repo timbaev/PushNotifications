@@ -9,6 +9,5 @@
 import Foundation
 
 protocol NotificationManager {
-    
      func reciveNotification(with option: [String: Any]) 
 }

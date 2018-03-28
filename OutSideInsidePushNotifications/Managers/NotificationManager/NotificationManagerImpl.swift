@@ -22,7 +22,7 @@ class NotificationManagerImpl: NotificationManager {
         guard let alert = aps["alert"] as? [String: String] else { return }
             
         if let bodyCheck = alert["body"] {
-                body = bodyCheck
+            body = bodyCheck
         }
         if let titleCheck = alert["title"] {
             title = titleCheck
