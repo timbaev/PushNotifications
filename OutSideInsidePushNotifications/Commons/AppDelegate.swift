@@ -13,15 +13,17 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var notificationManager: NotificationManager?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        notificationManager = NotificationManagerImpl()
+            
         registerForNotifications()
         
-        if let option = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: Any], let data = option["aps"] {
-            // здесь обработка того, что будет по нажатию на пуш уведомление
-            print ("data: \(data)")
+        if let option = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: Any] {
+            notificationManager?.reciveNotification(with: option)
         }
         
         return true
