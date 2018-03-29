@@ -22,7 +22,6 @@
 		CB648DEA206AECF600009C23 /* RealmNotificationDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB648DE9206AECF600009C23 /* RealmNotificationDatabaseManager.swift */; };
 		CB648DEE206AEDFC00009C23 /* NotificationRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB648DED206AEDFC00009C23 /* NotificationRealm.swift */; };
 		CB648DF1206AEE6C00009C23 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB648DF0206AEE6C00009C23 /* NotificationModel.swift */; };
-		CB648DFA206B029A00009C23 /* ImageDiskUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB648DF9206B029A00009C23 /* ImageDiskUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		CB648DE9206AECF600009C23 /* RealmNotificationDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNotificationDatabaseManager.swift; sourceTree = "<group>"; };
 		CB648DED206AEDFC00009C23 /* NotificationRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRealm.swift; sourceTree = "<group>"; };
 		CB648DF0206AEE6C00009C23 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
-		CB648DF9206B029A00009C23 /* ImageDiskUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDiskUtil.swift; sourceTree = "<group>"; };
 		CB648DFB206B092700009C23 /* OutSideInsidePushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutSideInsidePushNotifications.entitlements; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +129,6 @@
 		CB640AF1206937370067F3C2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CB648DF8206B027100009C23 /* ImageSaver */,
 				CB2428762069961200261482 /* ModuleInput */,
 				CB640AF7206937F50067F3C2 /* Storyboard */,
 				CB640AF22069377F0067F3C2 /* AlertsFactory */,
@@ -197,14 +194,6 @@
 				CB648DF0206AEE6C00009C23 /* NotificationModel.swift */,
 			);
 			path = POSO;
-			sourceTree = "<group>";
-		};
-		CB648DF8206B027100009C23 /* ImageSaver */ = {
-			isa = PBXGroup;
-			children = (
-				CB648DF9206B029A00009C23 /* ImageDiskUtil.swift */,
-			);
-			path = ImageSaver;
 			sourceTree = "<group>";
 		};
 		CFDE61CFFB4266C4F1254880 /* Pods */ = {
@@ -357,7 +346,6 @@
 				CB648DE8206AECE000009C23 /* NotificationDatabaseManager.swift in Sources */,
 				CB648DEA206AECF600009C23 /* RealmNotificationDatabaseManager.swift in Sources */,
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
-				CB648DFA206B029A00009C23 /* ImageDiskUtil.swift in Sources */,
 				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
 				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
@@ -506,7 +494,7 @@
 				CODE_SIGN_ENTITLEMENTS = OutSideInsidePushNotifications/OutSideInsidePushNotifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
-				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,7 +513,7 @@
 				CODE_SIGN_ENTITLEMENTS = OutSideInsidePushNotifications/OutSideInsidePushNotifications.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 33NC89QWWR;
-				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OutSideInsidePushNotifications/Commons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";

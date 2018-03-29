@@ -12,13 +12,13 @@ struct NotificationModel {
     
     let title: String
     let text: String?
-    let image: UIImage?
+    let imageURL: URL?
     let created: Date
     
-    init(title: String, text: String?, image: UIImage?, created: Date = Date()) {
+    init(title: String, text: String?, imageURL: URL?, created: Date = Date()) {
         self.title = title
         self.text = text
-        self.image = image
+        self.imageURL = imageURL
         self.created = created
     }
     

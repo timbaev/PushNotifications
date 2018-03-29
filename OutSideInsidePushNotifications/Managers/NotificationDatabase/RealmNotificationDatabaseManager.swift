@@ -58,20 +58,18 @@ class RealmNotificationDatabaseManager: NotificationDatabaseManager {
 extension RealmNotificationDatabaseManager {
     
     func toModel(from realm: NotificationRealm) -> NotificationModel {
-        var image: UIImage?
-        if let imageName = realm.imageName {
-            image = ImageDiskUtil.loadImage(with: imageName)
+        var url: URL?
+        if let stringURL = realm.imageURL {
+            url = URL(string: stringURL)
         }
-        return NotificationModel(title: realm.title, text: realm.text, image: image, created: realm.created)
+        return NotificationModel(title: realm.title, text: realm.text, imageURL: url, created: realm.created)
     }
     
     func toRealm(from model: NotificationModel) -> NotificationRealm {
         let realmObject = NotificationRealm()
         realmObject.title = model.title
         realmObject.text = model.text
-        if let image = model.image {
-            realmObject.imageName = ImageDiskUtil.saveImage(image)
-        }
+        realmObject.imageURL = model.imageURL?.absoluteString
         realmObject.created = model.created
         return realmObject
     }
