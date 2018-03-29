@@ -24,7 +24,6 @@
 		CB648DF1206AEE6C00009C23 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB648DF0206AEE6C00009C23 /* NotificationModel.swift */; };
 		FF8A1733206C167800242631 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1732206C167800242631 /* NotificationManager.swift */; };
 		FF8A1735206C168A00242631 /* NotificationManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1734206C168A00242631 /* NotificationManagerImpl.swift */; };
-		FF8A1737206C1A9400242631 /* TemporaryNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1736206C1A9400242631 /* TemporaryNotificationModel.swift */; };
 		FF8A177B206C303B00242631 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A177A206C303B00242631 /* NotificationService.swift */; };
 		FF8A177F206C303B00242631 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF8A1778206C303B00242631 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF9917C2206D16CC003B2838 /* NotificationManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1734206C168A00242631 /* NotificationManagerImpl.swift */; };
@@ -65,6 +64,7 @@
 		7CAC19592067F21300B38ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2428772069962D00261482 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
 		CB24287A2069964700261482 /* ModuleInputHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInputHolder.swift; sourceTree = "<group>"; };
+		CB32D0B8206D9DAF004379D7 /* OutSideInsidePushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutSideInsidePushNotifications.entitlements; sourceTree = "<group>"; };
 		CB640AF32069377F0067F3C2 /* CommonAlertsFactoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactoryImpl.swift; sourceTree = "<group>"; };
 		CB640AF42069377F0067F3C2 /* CommonAlertsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertsFactory.swift; sourceTree = "<group>"; };
 		CB640AF8206938390067F3C2 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -73,18 +73,15 @@
 		CB648DE9206AECF600009C23 /* RealmNotificationDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNotificationDatabaseManager.swift; sourceTree = "<group>"; };
 		CB648DED206AEDFC00009C23 /* NotificationRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRealm.swift; sourceTree = "<group>"; };
 		CB648DF0206AEE6C00009C23 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
-		CB648DFB206B092700009C23 /* OutSideInsidePushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutSideInsidePushNotifications.entitlements; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8A1732206C167800242631 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FF8A1734206C168A00242631 /* NotificationManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerImpl.swift; sourceTree = "<group>"; };
-		FF8A1736206C1A9400242631 /* TemporaryNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryNotificationModel.swift; sourceTree = "<group>"; };
 		FF8A173F206C2C4600242631 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		FF8A1741206C2C4600242631 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		FF8A1778206C303B00242631 /* NotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8A177A206C303B00242631 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		FF8A177C206C303B00242631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFD25DBA206AFF0F00F8577F /* OutSideInsidePushNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OutSideInsidePushNotifications.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +126,9 @@
 		7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				CB648DFB206B092700009C23 /* OutSideInsidePushNotifications.entitlements */,
+				CB32D0B8206D9DAF004379D7 /* OutSideInsidePushNotifications.entitlements */,
 				CB648DEB206AEDFC00009C23 /* Entities */,
 				CB648DE5206AECC400009C23 /* Managers */,
-				FF8A1731206C166200242631 /* Managers */,
-				FFD25DBA206AFF0F00F8577F /* OutSideInsidePushNotifications.entitlements */,
 				CB640AF1206937370067F3C2 /* Helpers */,
 				CB640AF0206936E00067F3C2 /* Modules */,
 				CB640AEE206936A10067F3C2 /* Commons */,
@@ -210,6 +205,7 @@
 		CB648DE5206AECC400009C23 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FF8A1738206C287500242631 /* NotificationManager */,
 				CB648DE6206AECCB00009C23 /* NotificationDatabase */,
 			);
 			path = Managers;
@@ -256,15 +252,6 @@
 				CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		FF8A1731206C166200242631 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				FF8A1738206C287500242631 /* NotificationManager */,
-				FF8A1736206C1A9400242631 /* TemporaryNotificationModel.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		FF8A1738206C287500242631 /* NotificationManager */ = {
@@ -461,7 +448,6 @@
 				CB648DEA206AECF600009C23 /* RealmNotificationDatabaseManager.swift in Sources */,
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
 				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
-				FF8A1737206C1A9400242631 /* TemporaryNotificationModel.swift in Sources */,
 				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
