@@ -9,7 +9,5 @@
 import UIKit
 
 protocol NotificationTableViewInput: class {
-    func set(text: String)
-    func set(image: UIImage)
-    func set(title: String)
+
 }

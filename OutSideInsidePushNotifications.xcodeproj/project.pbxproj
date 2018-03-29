@@ -26,6 +26,16 @@
 		FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200891206D613D004E41DF /* NotificationTableViewInput.swift */; };
 		FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200893206D6159004E41DF /* NotificationTableViewOutput.swift */; };
 		FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */; };
+		FF20089E206DA00A004E41DF /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20089D206DA00A004E41DF /* CellModel.swift */; };
+		FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20089F206DA3AF004E41DF /* NotificationCellModel.swift */; };
+		FF2008A2206DA679004E41DF /* NotificationTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008A1206DA679004E41DF /* NotificationTablePresenter.swift */; };
+		FF2008A4206DA692004E41DF /* NotificationTableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008A3206DA692004E41DF /* NotificationTableInteractor.swift */; };
+		FF2008A6206DA6AB004E41DF /* NotificationTableInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008A5206DA6AB004E41DF /* NotificationTableInteractorInput.swift */; };
+		FF2008A8206DA6B9004E41DF /* NotificationTableInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008A7206DA6B9004E41DF /* NotificationTableInteractorOutput.swift */; };
+		FF2008AB206DA7B3004E41DF /* NotificationTableConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AA206DA7B3004E41DF /* NotificationTableConfigurator.swift */; };
+		FF2008AD206DA9DA004E41DF /* NotificationTableInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */; };
+		FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */; };
+		FF2008B2206DB22F004E41DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008B1206DB22F004E41DF /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +62,16 @@
 		FF200891206D613D004E41DF /* NotificationTableViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewInput.swift; sourceTree = "<group>"; };
 		FF200893206D6159004E41DF /* NotificationTableViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewOutput.swift; sourceTree = "<group>"; };
 		FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableDataSourceInput.swift; sourceTree = "<group>"; };
+		FF20089D206DA00A004E41DF /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		FF20089F206DA3AF004E41DF /* NotificationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellModel.swift; sourceTree = "<group>"; };
+		FF2008A1206DA679004E41DF /* NotificationTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTablePresenter.swift; sourceTree = "<group>"; };
+		FF2008A3206DA692004E41DF /* NotificationTableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableInteractor.swift; sourceTree = "<group>"; };
+		FF2008A5206DA6AB004E41DF /* NotificationTableInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableInteractorInput.swift; sourceTree = "<group>"; };
+		FF2008A7206DA6B9004E41DF /* NotificationTableInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableInteractorOutput.swift; sourceTree = "<group>"; };
+		FF2008AA206DA7B3004E41DF /* NotificationTableConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableConfigurator.swift; sourceTree = "<group>"; };
+		FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableInitializer.swift; sourceTree = "<group>"; };
+		FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationTableRouter.swift"; sourceTree = "<group>"; };
+		FF2008B1206DB22F004E41DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +192,8 @@
 		FF20087D206D4CFA004E41DF /* NotificationTable */ = {
 			isa = PBXGroup;
 			children = (
+				FF2008B0206DB222004E41DF /* Helpers */,
+				FF2008A9206DA79B004E41DF /* Configurator */,
 				FF200888206D5713004E41DF /* NotificationCell */,
 				FF200885206D55CB004E41DF /* DataSource */,
 				FF200882206D4D2B004E41DF /* Router */,
@@ -196,6 +218,9 @@
 		FF20087F206D4D15004E41DF /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				FF2008A3206DA692004E41DF /* NotificationTableInteractor.swift */,
+				FF2008A5206DA6AB004E41DF /* NotificationTableInteractorInput.swift */,
+				FF2008A7206DA6B9004E41DF /* NotificationTableInteractorOutput.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -203,6 +228,7 @@
 		FF200880206D4D1D004E41DF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FF2008A1206DA679004E41DF /* NotificationTablePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -210,6 +236,8 @@
 		FF200881206D4D23004E41DF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FF20089D206DA00A004E41DF /* CellModel.swift */,
+				FF20089F206DA3AF004E41DF /* NotificationCellModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -217,6 +245,7 @@
 		FF200882206D4D2B004E41DF /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -253,6 +282,23 @@
 				FF20088F206D5FBF004E41DF /* NotificationModel.swift */,
 			);
 			path = POSO;
+			sourceTree = "<group>";
+		};
+		FF2008A9206DA79B004E41DF /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FF2008AA206DA7B3004E41DF /* NotificationTableConfigurator.swift */,
+				FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		FF2008B0206DB222004E41DF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FF2008B1206DB22F004E41DF /* Result.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,10 +433,18 @@
 			files = (
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
 				FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */,
+				FF20089E206DA00A004E41DF /* CellModel.swift in Sources */,
 				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
+				FF2008A4206DA692004E41DF /* NotificationTableInteractor.swift in Sources */,
+				FF2008A8206DA6B9004E41DF /* NotificationTableInteractorOutput.swift in Sources */,
+				FF2008B2206DB22F004E41DF /* Result.swift in Sources */,
 				FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */,
+				FF2008A2206DA679004E41DF /* NotificationTablePresenter.swift in Sources */,
+				FF2008AB206DA7B3004E41DF /* NotificationTableConfigurator.swift in Sources */,
 				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
+				FF2008AD206DA9DA004E41DF /* NotificationTableInitializer.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
+				FF2008A6206DA6AB004E41DF /* NotificationTableInteractorInput.swift in Sources */,
 				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
 				FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */,
 				FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */,
@@ -398,6 +452,8 @@
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
 				FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */,
 				FF200890206D5FBF004E41DF /* NotificationModel.swift in Sources */,
+				FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */,
+				FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */,
 				CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

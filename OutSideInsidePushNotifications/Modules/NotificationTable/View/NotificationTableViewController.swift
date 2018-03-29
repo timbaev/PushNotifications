@@ -8,9 +8,10 @@
 
 import UIKit
 
-class NotificationTableViewController: UIViewController {
+class NotificationTableViewController: UIViewController, NotificationTableViewInput {
  
     @IBOutlet weak var tableView: UITableView!
+    var presenter: NotificationTableViewOutput!
     var inputDataSource: NotificationTableDataSourceInput!
     
     override func viewDidLoad() {
