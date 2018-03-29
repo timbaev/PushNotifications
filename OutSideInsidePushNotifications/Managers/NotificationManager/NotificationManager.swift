@@ -8,6 +8,11 @@
 
 import Foundation
 
+/// Manager for processing of notifications
 protocol NotificationManager {
-     func reciveNotification(with option: [String: Any]) 
+    
+     /// To recive notification and create notification model to save to the database
+     ///
+     /// - Parameter option: remote notification from [UIApplicationLaunchOptionsKey: Any]
+     func reciveNotification(with option: [String: Any])
 }

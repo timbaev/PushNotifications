@@ -9,10 +9,18 @@
 import Foundation
 import UIKit
 
+/// Temporary struct for testing
 struct TemporaryNotificationModel {
     
     var title: String
     var text: String?
     var image: UIImage?
-    var date: Date?
+    var created: Date
+    
+    init(title: String, text: String?, image: UIImage?, created: Date = Date()) {
+        self.title = title
+        self.text = text
+        self.image = image
+        self.created = created
+    }
 }

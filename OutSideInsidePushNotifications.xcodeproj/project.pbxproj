@@ -23,6 +23,8 @@
 		FF8A1737206C1A9400242631 /* TemporaryNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1736206C1A9400242631 /* TemporaryNotificationModel.swift */; };
 		FF8A177B206C303B00242631 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A177A206C303B00242631 /* NotificationService.swift */; };
 		FF8A177F206C303B00242631 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF8A1778206C303B00242631 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FF9917C2206D16CC003B2838 /* NotificationManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1734206C168A00242631 /* NotificationManagerImpl.swift */; };
+		FF9917C3206D16D0003B2838 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1732206C167800242631 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -414,6 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9917C3206D16D0003B2838 /* NotificationManager.swift in Sources */,
+				FF9917C2206D16CC003B2838 /* NotificationManagerImpl.swift in Sources */,
 				FF8A177B206C303B00242631 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

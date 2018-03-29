@@ -46,15 +46,13 @@ class NotificationService: UNNotificationServiceExtension {
     }
     
     override func serviceExtensionTimeWillExpire() {
-        // Called just before the extension will be terminated by the system.
-        // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
         if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
             contentHandler(bestAttemptContent)
         }
     }
 }
 
-// and already implemented push notifications extension
+// Download image for show push notification
 
 extension UNNotificationAttachment {
     static func create(imageFileIdentifier: String, data: NSData, options: [NSObject : AnyObject]?) -> UNNotificationAttachment? {
@@ -62,6 +60,7 @@ extension UNNotificationAttachment {
         let tmpSubFolderName = ProcessInfo.processInfo.globallyUniqueString
         let fileURLPath = NSURL(fileURLWithPath: NSTemporaryDirectory())
         let tmpSubFolderURL = fileURLPath.appendingPathComponent(tmpSubFolderName, isDirectory: true)
+        
         do {
             try fileManager.createDirectory(at: tmpSubFolderURL!, withIntermediateDirectories: true, attributes: nil)
             let fileURL = tmpSubFolderURL?.appendingPathComponent(imageFileIdentifier)
