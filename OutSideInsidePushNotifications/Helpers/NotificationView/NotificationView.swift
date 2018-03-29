@@ -15,6 +15,7 @@ class NotificationView: UIView {
     @IBOutlet weak var textLabel: UILabel!
     
     private let defaultHeight: CGFloat = 100
+    private let notificationViewNib = "NotificationView"
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +33,7 @@ class NotificationView: UIView {
     }
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("NotificationView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(notificationViewNib, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
