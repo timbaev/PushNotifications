@@ -12,6 +12,7 @@ class NotificationService: UNNotificationServiceExtension {
     
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
+    let imageFileIdentifier = "image.gif"
     
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
@@ -33,11 +34,11 @@ class NotificationService: UNNotificationServiceExtension {
             return failEarly()
         }
         
-        guard let imageData = NSData(contentsOf: URL(string: attachmentURL)!) else {
+        guard let url = URL(string: attachmentURL), let imageData = NSData(contentsOf: url) else {
             return failEarly()
         }
         
-        guard let attachment = UNNotificationAttachment.create(imageFileIdentifier: "image.gif", data: imageData, options: nil) else {
+        guard let attachment = UNNotificationAttachment.create(imageFileIdentifier: imageFileIdentifier, data: imageData, options: nil) else {
             return failEarly()
         }
         
@@ -62,10 +63,11 @@ extension UNNotificationAttachment {
         let tmpSubFolderURL = fileURLPath.appendingPathComponent(tmpSubFolderName, isDirectory: true)
         
         do {
-            try fileManager.createDirectory(at: tmpSubFolderURL!, withIntermediateDirectories: true, attributes: nil)
-            let fileURL = tmpSubFolderURL?.appendingPathComponent(imageFileIdentifier)
-            try data.write(to: fileURL!, options: [])
-            let imageAttachment = try UNNotificationAttachment.init(identifier: imageFileIdentifier, url: fileURL!, options: options)
+            guard let url = tmpSubFolderURL else { return nil}
+            try fileManager.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+            guard let fileURL = tmpSubFolderURL?.appendingPathComponent(imageFileIdentifier) else { return nil}
+            try data.write(to: fileURL, options: [])
+            let imageAttachment = try UNNotificationAttachment.init(identifier: imageFileIdentifier, url: fileURL, options: options)
             return imageAttachment
         }
         catch let error {
