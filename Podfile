@@ -7,5 +7,6 @@ target 'OutSideInsidePushNotifications' do
 
   # Pods for OutSideInsidePushNotifications
   pod 'SDWebImage', '~> 4.0'
+  pod 'RealmSwift'
 
 end
