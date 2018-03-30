@@ -66,7 +66,7 @@ class NotificationView: UIView {
         hideAnimate()
     }
     
-    private func hideAnimate() {
+    @objc private func hideAnimate() {
         UIView.animate(withDuration: 0.2) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.frame.origin.y -= strongSelf.defaultHeight
@@ -74,10 +74,13 @@ class NotificationView: UIView {
     }
     
     func showAnimate() {
-        UIView.animate(withDuration: 0.5, delay: 1, options: .curveEaseOut, animations: { [weak self] in
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.frame.origin.y += strongSelf.defaultHeight
-        }, completion: nil)
+        }) { [weak self] (completion) in
+            guard let strongSelf = self else { return }
+            let _ = Timer.scheduledTimer(timeInterval: 3.0, target: strongSelf, selector: #selector(strongSelf.hideAnimate), userInfo: nil, repeats: false)
+        }
     }
 
 }
