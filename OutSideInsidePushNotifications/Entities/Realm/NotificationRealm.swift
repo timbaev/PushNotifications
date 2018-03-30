@@ -11,7 +11,7 @@ import RealmSwift
 
 class NotificationRealm: Object {
     
-    @objc dynamic var title = ""
+    @objc dynamic var title: String? = nil
     @objc dynamic var text: String? = nil
     @objc dynamic var imageURL: String? = nil
     @objc dynamic var created = Date()
