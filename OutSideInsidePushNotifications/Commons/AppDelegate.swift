@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        notificationManager = NotificationManagerImpl()
+        notificationManager = NotificationManagerImplementation(databaseManager: RealmNotificationDatabaseManager())
             
         registerForNotifications()
         
@@ -78,13 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    // Обработка нажатия пуш уведомлений если приложение было открыто
+
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("--- Notification received ---")
         
-        // здесь обработка того, что будет по нажатию на пуш уведомление
-        let dataInfo = userInfo as! [String: Any]
-        print("Data: \(String(describing: dataInfo["aps"]))")
+        guard let dataInfo = userInfo as? [String: Any] else { return }
+        notificationManager?.reciveNotification(with: dataInfo)
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -98,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-
+        print(error.localizedDescription)
         print("Failed to register push notifications")
     }
 
