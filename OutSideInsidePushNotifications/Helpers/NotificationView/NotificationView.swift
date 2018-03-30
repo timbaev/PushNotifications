@@ -27,6 +27,14 @@ class NotificationView: UIView {
         commonInit()
     }
     
+    func set(title: String?) {
+        titleLabel.text = title
+    }
+    
+    func set(text: String?) {
+        textLabel.text = text
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NotificationDatabaseManager {
+protocol NotificationDatabaseManager: class {
     
     /// Write notification model to database
     ///
