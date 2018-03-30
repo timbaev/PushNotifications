@@ -419,6 +419,7 @@
 				FF4FB60A206E387E007E39D7 /* UIImageViewExtension.swift */,
 			);
 			path = Helpers;
+		};
 		FF8A1738206C287500242631 /* NotificationManager */ = {
 			isa = PBXGroup;
 			children = (
