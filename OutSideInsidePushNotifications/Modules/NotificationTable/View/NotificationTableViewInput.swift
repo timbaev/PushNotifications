@@ -10,4 +10,8 @@ import UIKit
 
 protocol NotificationTableViewInput: class {
 
+    /// Set notification models
+    ///
+    /// - Parameter notificationModels: notifications
+    func setCellModels(with notificationModels: [NotificationCellModel])
 }

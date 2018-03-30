@@ -13,17 +13,23 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     weak var view: NotificationTableViewInput!
     var interactor: NotificationTableInteractorInput!
     
-    
-    // MARK: - View output
+    // MARK: - View output implementation
     
     func setNotifications() {
-        
+        interactor.getNotifications()
     }
     
-    // MARK: - Interactor output
+    // MARK: - Interactor output implementation
     
-    func didFinishToSetNotifications() {
-        
+    func didFinishingToGetNotifications(with result: Result<NotificationCellModel>) {
+        switch result {
+        case .success(let notifications):
+            view.setCellModels(with: notifications)
+            break
+        case .failure(let errorResult):
+            //возможно кинуть аллерт или ничего не делать
+            break
+        }
+    
     }
-    
 }

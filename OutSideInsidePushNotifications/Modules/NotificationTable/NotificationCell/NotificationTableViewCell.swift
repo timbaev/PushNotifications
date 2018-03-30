@@ -22,16 +22,14 @@ class NotificationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
  
-    func prepareNotificationImage(with image: UIImage) {
-        notificationImage.image = image
-    }
-    
-    func prepareNotificationText(with text: String) {
-        notificationTextLabel.text = text
-    }
-    
-    func prepareNotificationTitle(with text: String) {
-        notificationTitleLabel.text = text
+    func prepare(with notificationCellModel: NotificationCellModel) {
+        
+        if let url = notificationCellModel.imageURL {
+            self.notificationImage.downloadedFrom(url: url)
+        }
+        
+        self.notificationTextLabel.text = notificationCellModel.text
+        self.notificationTitleLabel.text = notificationCellModel.text
     }
     
 }

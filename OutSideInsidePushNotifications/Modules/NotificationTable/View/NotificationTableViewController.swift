@@ -16,16 +16,20 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.setNotifications()
         tableView.delegate = inputDataSource
         tableView.dataSource = inputDataSource
     }
     
-    func setCellModels() {
-        
-    }
-    
     func reloadData() {
+        presenter.setNotifications()
         tableView.reloadData()
+    }
+
+    //MARK: - View input implementation
+    
+    func setCellModels(with notificationModels: [NotificationCellModel]) {
+        inputDataSource.setCurrentNotification(with: notificationModels)
     }
     
 }

@@ -10,4 +10,6 @@ import Foundation
 
 protocol NotificationTableInteractorInput: class {
     
+    // Get notifications
+    func getNotifications()
 }

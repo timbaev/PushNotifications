@@ -10,4 +10,8 @@ import Foundation
 
 protocol NotificationTableInteractorOutput: class {
     
+    /// Result of receiving notifications
+    ///
+    /// - Parameter result: result
+    func didFinishingToGetNotifications(with result: Result<NotificationCellModel>)
 }

@@ -12,4 +12,10 @@ class NotificationTableInteractor: NotificationTableInteractorInput {
     
     weak var presenter: NotificationTableInteractorOutput!
     
+    //MARK: - Interactor input implementation
+    
+    func getNotifications() {
+        //запрос в бд
+    }
+    
 }

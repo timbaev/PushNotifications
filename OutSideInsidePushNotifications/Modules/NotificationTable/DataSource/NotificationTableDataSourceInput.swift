@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+/// Data source input protocol
 protocol NotificationTableDataSourceInput: UITableViewDelegate, UITableViewDataSource {
     
+    /// Set all notifications in data source
+    ///
+    /// - Parameter notifications: current notifications
+    func setCurrentNotification(with notifications: [NotificationCellModel])
 }

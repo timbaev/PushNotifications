@@ -9,7 +9,7 @@
 import Foundation
 
 struct NotificationCellModel: CellModel {
-    var text: String
-    var title: String
-    var imageURL: URL
+    var text: String?
+    var title: String?
+    var imageURL: URL?
 }

@@ -36,6 +36,7 @@
 		FF2008AD206DA9DA004E41DF /* NotificationTableInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */; };
 		FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */; };
 		FF2008B2206DB22F004E41DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008B1206DB22F004E41DF /* Result.swift */; };
+		FF4FB60B206E387E007E39D7 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4FB60A206E387E007E39D7 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableInitializer.swift; sourceTree = "<group>"; };
 		FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationTableRouter.swift"; sourceTree = "<group>"; };
 		FF2008B1206DB22F004E41DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FF4FB60A206E387E007E39D7 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2008B1206DB22F004E41DF /* Result.swift */,
+				FF4FB60A206E387E007E39D7 /* UIImageViewExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4FB60B206E387E007E39D7 /* UIImageViewExtension.swift in Sources */,
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
 				FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */,
 				FF20089E206DA00A004E41DF /* CellModel.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 
 /// Model for data transmission
 protocol CellModel {
-    var text: String { get set }
-    var title: String { get set }
-    var imageURL: URL { get set }
+    var text: String? { get set }
+    var title: String? { get set }
+    var imageURL: URL? { get set }
 }

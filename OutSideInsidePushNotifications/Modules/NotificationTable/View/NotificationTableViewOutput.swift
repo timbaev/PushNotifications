@@ -10,4 +10,7 @@ import Foundation
 
 protocol NotificationTableViewOutput: class {
     
+    
+    /// Setter
+    func setNotifications()
 }
