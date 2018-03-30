@@ -2,6 +2,7 @@
 //  NotificationModel.swift
 //  OutSideInsidePushNotifications
 //
+//  Created by Damir Zaripov on 29.03.2018.
 //  Created by Тимур Шафигуллин on 28.03.18.
 //  Copyright © 2018 iOSLab. All rights reserved.
 //
