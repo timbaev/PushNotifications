@@ -33,7 +33,7 @@ class NotificationTableDataSource: NSObject, NotificationTableDataSourceInput {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeight
+        return 98
     }
     
     func setCurrentNotification(with notifications: [CellModel]? ) {
