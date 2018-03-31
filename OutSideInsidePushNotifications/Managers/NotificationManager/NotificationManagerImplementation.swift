@@ -22,6 +22,7 @@ class NotificationManagerImplementation: NotificationManager {
         guard let notificationModel = try? JSONDecoder().decode(NotificationModel.self, from: jsonData) else { return }
         
         databaseManager.create(notificationModel)
+        print("--- Notification parsed and will be save ---")
         
         if var topController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
