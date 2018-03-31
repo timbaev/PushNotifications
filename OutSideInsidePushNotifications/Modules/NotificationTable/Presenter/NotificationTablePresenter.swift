@@ -9,7 +9,7 @@
 import Foundation
 
 class NotificationTablePresenter: NotificationTableViewOutput, NotificationTableInteractorOutput {
- 
+
     weak var view: NotificationTableViewInput!
     weak var router: NotificationTableRouterInput!
     var interactor: NotificationTableInteractorInput!
@@ -17,32 +17,27 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     // MARK: - View output implementation
     
     func viewIsReady() {
-        getNotifications()
         view.registerCell()
         view.setTableViewArguments()
         view.connectTableWithDataSource()
+        getNotifications()
     }
     
     func viewDidAppear() {
         interactor.getNotifications()
-        view.reloadTableView()
     }
 
     func getNotifications() {
         interactor.getNotifications()
     }
-    
-    func reloadNotificationData() {
-        interactor.getNotifications()
-        view.reloadTableView()
-    }
-    
+ 
     // MARK: - Interactor output implementation
     
     func didFinishingToGetNotifications(with result: Result<NotificationCellModel>) {
         switch result {
         case .success(let notifications):
             view.setCellModels(with: notifications)
+            view.reloadTableView()
             break
         case .failure(let errorResult):
             //возможно кинуть аллерт или ничего не делать

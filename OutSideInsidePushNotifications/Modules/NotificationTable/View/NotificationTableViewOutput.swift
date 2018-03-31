@@ -16,7 +16,6 @@ protocol NotificationTableViewOutput: class {
     /// View lifecycle
     func viewIsReady()
     
+    /// Logic when the view became the background
     func viewDidAppear()
- 
-    func reloadNotificationData()
 }
