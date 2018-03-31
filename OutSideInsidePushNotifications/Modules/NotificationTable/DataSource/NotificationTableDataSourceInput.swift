@@ -15,5 +15,5 @@ protocol NotificationTableDataSourceInput: UITableViewDelegate, UITableViewDataS
     /// Set all notifications in data source
     ///
     /// - Parameter notifications: current notifications
-    func setCurrentNotification(with notifications: [NotificationCellModel])
+    func setCurrentNotification(with notifications: [CellModel]?)
 }

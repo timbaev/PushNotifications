@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2DD42550214E6C1DA744C066 /* Pods_OutSideInsidePushNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */; };
-		7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC194D2067F21300B38ACE /* AppDelegate.swift */; };
 		7CAC19532067F21300B38ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19512067F21300B38ACE /* Main.storyboard */; };
 		7CAC19552067F21300B38ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19542067F21300B38ACE /* Assets.xcassets */; };
 		7CAC19582067F21300B38ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19562067F21300B38ACE /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 		FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200886206D564F004E41DF /* NotificationTableDataSource.swift */; };
 		FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200889206D5736004E41DF /* NotificationTableViewCell.swift */; };
 		FF20088C206D5736004E41DF /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF20088A206D5736004E41DF /* NotificationTableViewCell.xib */; };
-		FF200890206D5FBF004E41DF /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20088F206D5FBF004E41DF /* NotificationModel.swift */; };
 		FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200891206D613D004E41DF /* NotificationTableViewInput.swift */; };
 		FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200893206D6159004E41DF /* NotificationTableViewOutput.swift */; };
 		FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */; };
@@ -43,6 +41,8 @@
 		FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */; };
 		FF20137C206EF65800EE01AB /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20137A206EF65800EE01AB /* UIImageViewExtension.swift */; };
 		FF20137D206EF65800EE01AB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20137B206EF65800EE01AB /* Result.swift */; };
+		FF20137F206EFC6700EE01AB /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20137E206EFC6700EE01AB /* NotificationModel.swift */; };
+		FF201380206EFF2D00EE01AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC194D2067F21300B38ACE /* AppDelegate.swift */; };
 		FF8A1733206C167800242631 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1732206C167800242631 /* NotificationManager.swift */; };
 		FF8A177B206C303B00242631 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A177A206C303B00242631 /* NotificationService.swift */; };
 		FF8A177F206C303B00242631 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF8A1778206C303B00242631 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -94,14 +94,12 @@
 		CB640AF9206938390067F3C2 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		CB648DE9206AECF600009C23 /* RealmNotificationDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNotificationDatabaseManager.swift; sourceTree = "<group>"; };
 		CB648DED206AEDFC00009C23 /* NotificationRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRealm.swift; sourceTree = "<group>"; };
-		CB648DF0206AEE6C00009C23 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF200883206D4E32004E41DF /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
 		FF200886206D564F004E41DF /* NotificationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableDataSource.swift; sourceTree = "<group>"; };
 		FF200889206D5736004E41DF /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		FF20088A206D5736004E41DF /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
-		FF20088F206D5FBF004E41DF /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		FF200891206D613D004E41DF /* NotificationTableViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewInput.swift; sourceTree = "<group>"; };
 		FF200893206D6159004E41DF /* NotificationTableViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewOutput.swift; sourceTree = "<group>"; };
 		FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableDataSourceInput.swift; sourceTree = "<group>"; };
@@ -116,6 +114,7 @@
 		FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationTableRouter.swift"; sourceTree = "<group>"; };
 		FF20137A206EF65800EE01AB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		FF20137B206EF65800EE01AB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FF20137E206EFC6700EE01AB /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		FF8A1732206C167800242631 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FF8A173F206C2C4600242631 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		FF8A1741206C2C4600242631 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
@@ -166,7 +165,6 @@
 		7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				FF20088D206D5FA2004E41DF /* Entities */,
 				CB16A4BD206E138200637FB8 /* Parsers */,
 				CB32D0B8206D9DAF004379D7 /* OutSideInsidePushNotifications.entitlements */,
 				CB648DEB206AEDFC00009C23 /* Entities */,
@@ -300,7 +298,7 @@
 		CB648DEF206AEE5100009C23 /* POSO */ = {
 			isa = PBXGroup;
 			children = (
-				CB648DF0206AEE6C00009C23 /* NotificationModel.swift */,
+				FF20137E206EFC6700EE01AB /* NotificationModel.swift */,
 			);
 			path = POSO;
 			sourceTree = "<group>";
@@ -378,8 +376,8 @@
 		FF200885206D55CB004E41DF /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				FF200886206D564F004E41DF /* NotificationTableDataSource.swift */,
 				FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */,
+				FF200886206D564F004E41DF /* NotificationTableDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -391,22 +389,6 @@
 				FF20088A206D5736004E41DF /* NotificationTableViewCell.xib */,
 			);
 			path = NotificationCell;
-			sourceTree = "<group>";
-		};
-		FF20088D206D5FA2004E41DF /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				FF20088E206D5FA7004E41DF /* POSO */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		FF20088E206D5FA7004E41DF /* POSO */ = {
-			isa = PBXGroup;
-			children = (
-				FF20088F206D5FBF004E41DF /* NotificationModel.swift */,
-			);
-			path = POSO;
 			sourceTree = "<group>";
 		};
 		FF2008A9206DA79B004E41DF /* Configurator */ = {
@@ -619,6 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF201380206EFF2D00EE01AB /* AppDelegate.swift in Sources */,
 				CB648DEA206AECF600009C23 /* RealmNotificationDatabaseManager.swift in Sources */,
 				CB24287B2069964700261482 /* ModuleInputHolder.swift in Sources */,
 				FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */,
@@ -634,18 +617,16 @@
 				CB24287E20699ABD00261482 /* NotificationView.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				FF2008A6206DA6AB004E41DF /* NotificationTableInteractorInput.swift in Sources */,
-				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
 				FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */,
 				FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */,
 				FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */,
+				FF20137F206EFC6700EE01AB /* NotificationModel.swift in Sources */,
 				FF20137C206EF65800EE01AB /* UIImageViewExtension.swift in Sources */,
 				CB16A4C4206EBB9C00637FB8 /* NotificationManagerImplementation.swift in Sources */,
-				7CAC194E2067F21300B38ACE /* AppDelegate.swift in Sources */,
 				CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */,
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
 				FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */,
 				FF20137D206EF65800EE01AB /* Result.swift in Sources */,
-				FF200890206D5FBF004E41DF /* NotificationModel.swift in Sources */,
 				FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */,
 				FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */,
 				CB648DEE206AEDFC00009C23 /* NotificationRealm.swift in Sources */,
@@ -813,8 +794,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7c39b073-840a-444d-837f-6a5fa873a801";
-				PROVISIONING_PROFILE_SPECIFIER = "TimDam Notifications";
+				PROVISIONING_PROFILE = "bf0c2429-561b-4052-973d-61318c1696a3";
+				PROVISIONING_PROFILE_SPECIFIER = "Push Notifications TimDam";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

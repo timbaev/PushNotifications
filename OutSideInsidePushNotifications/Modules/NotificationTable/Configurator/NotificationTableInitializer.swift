@@ -14,7 +14,7 @@ class NotificationTableInitializer: NSObject {
     
     override func awakeFromNib() {
         let configurator = NotificationTableConfigurator()
-        configurator.setupModel(with: viewController)
+        configurator.setupModule(with: viewController)
     }
     
 }

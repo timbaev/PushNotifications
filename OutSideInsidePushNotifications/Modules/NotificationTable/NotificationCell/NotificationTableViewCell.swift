@@ -21,15 +21,20 @@ class NotificationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        notificationImage.image = nil
+    }
  
-    func prepare(with notificationCellModel: NotificationCellModel) {
+    func prepare(with notificationCellModel: CellModel) {
         
         if let url = notificationCellModel.imageURL {
-            self.notificationImage.downloadedFrom(url: url)
+            notificationImage.downloadedFrom(url: url)
         }
         
-        self.notificationTextLabel.text = notificationCellModel.text
-        self.notificationTitleLabel.text = notificationCellModel.text
+        notificationTextLabel.text = notificationCellModel.text
+        notificationTitleLabel.text = notificationCellModel.text
     }
     
 }

@@ -10,7 +10,12 @@ import Foundation
 
 protocol NotificationTableViewOutput: class {
     
-    
     /// Setter
-    func setNotifications()
+    func getNotifications()
+    
+    /// View lifecycle
+    func viewIsReady()
+    
+    func viewDidAppear()
+ 
 }

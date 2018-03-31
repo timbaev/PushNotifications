@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-1609" y="-170"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="Hdy-O0-8wP">
             <objects>
                 <viewController id="pRr-iu-VeY" customClass="NotificationTableViewController" customModule="OutSideInsidePushNotifications" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,8 +76,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO8-S6-CFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ADJ-14-MMH" customClass="NotificationTableInitializer" customModule="OutSideInsidePushNotifications" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="pRr-iu-VeY" id="SbX-yC-6fr"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-658" y="388"/>
+            <point key="canvasLocation" x="-658" y="396"/>
         </scene>
     </scenes>
 </document>

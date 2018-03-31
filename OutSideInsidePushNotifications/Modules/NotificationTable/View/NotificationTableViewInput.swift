@@ -13,5 +13,13 @@ protocol NotificationTableViewInput: class {
     /// Set notification models
     ///
     /// - Parameter notificationModels: notifications
-    func setCellModels(with notificationModels: [NotificationCellModel])
+    func setCellModels(with notificationModels: [CellModel])
+    
+    /// Cell registration
+    func registerCell()
+    
+    /// Retrieving data from Data Source 
+    func connectTableWithDataSource()
+    
+    func refreshNotificitaion()
 }

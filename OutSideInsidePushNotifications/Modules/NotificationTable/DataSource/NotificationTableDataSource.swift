@@ -8,17 +8,14 @@
 
 import UIKit
 
-class NotificationListDataSource: NSObject, NotificationTableDataSourceInput {
+class NotificationTableDataSource: NSObject, NotificationTableDataSourceInput {
 
-    var notifications: [NotificationCellModel]?
+    var cellModels: [CellModel]?
     let cellHeight: CGFloat = 80
-    var currentNotificationImage: UIImage?
-    var currentNotificationTitle: String?
-    var currentNotificationText: String?
     let notificationCellIdentifier = "notificationCell"
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let notificationsCount = notifications?.count else { return 0 }
+        guard let notificationsCount = cellModels?.count else { return 0 }
         return notificationsCount
     }
     
@@ -26,7 +23,7 @@ class NotificationListDataSource: NSObject, NotificationTableDataSourceInput {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: notificationCellIdentifier, for: indexPath) as! NotificationTableViewCell
         
-        if let notifications = notifications {
+        if let notifications = cellModels {
             let notificationModel = notifications[indexPath.row]
             cell.prepare(with: notificationModel)
             return cell
@@ -39,7 +36,7 @@ class NotificationListDataSource: NSObject, NotificationTableDataSourceInput {
         return cellHeight
     }
     
-    func setCurrentNotification(with notifications: [NotificationCellModel] ) {
-        self.notifications = notifications
+    func setCurrentNotification(with notifications: [CellModel]? ) {
+        self.cellModels = notifications
     }
 }

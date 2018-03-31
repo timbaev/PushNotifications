@@ -10,17 +10,21 @@ import Foundation
 
 class NotificationTableConfigurator {
     
-    func setupModel(with viewController: NotificationTableViewController) {
+    func setupModule(with viewController: NotificationTableViewController) {
+        
         let presenter = NotificationTablePresenter()
         let interactor = NotificationTableInteractor()
-        //let router = NotificationTableRouter()
+        let notificationDataBaseManager = RealmNotificationDatabaseManager()
+        let inputDataSource = NotificationTableDataSource()
+        let router = NotificationTableRouter()
         
         viewController.presenter = presenter
+        viewController.inputDataSource = inputDataSource
         
         presenter.view = viewController
         presenter.interactor = interactor
         
         interactor.presenter = presenter
-     
+        interactor.notificationDataBaseManager = notificationDataBaseManager
     }
 }
