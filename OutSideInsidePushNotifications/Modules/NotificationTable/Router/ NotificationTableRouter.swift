@@ -8,6 +8,6 @@
 
 import Foundation
 
-class NotificationTableRouter {
+class NotificationTableRouter: NotificationTableRouterInput {
     
 }

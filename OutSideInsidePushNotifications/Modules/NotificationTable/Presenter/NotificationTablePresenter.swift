@@ -11,6 +11,7 @@ import Foundation
 class NotificationTablePresenter: NotificationTableViewOutput, NotificationTableInteractorOutput {
  
     weak var view: NotificationTableViewInput!
+    weak var router: NotificationTableRouterInput!
     var interactor: NotificationTableInteractorInput!
     
     // MARK: - View output implementation
@@ -18,15 +19,22 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     func viewIsReady() {
         getNotifications()
         view.registerCell()
+        view.setTableViewDelegate()
         view.connectTableWithDataSource()
     }
     
     func viewDidAppear() {
-        view.refreshNotificitaion()
+        interactor.getNotifications()
+        view.reloadTableView()
     }
 
     func getNotifications() {
         interactor.getNotifications()
+    }
+    
+    func reloadNotificationData() {
+        interactor.getNotifications()
+        view.reloadTableView()
     }
     
     // MARK: - Interactor output implementation

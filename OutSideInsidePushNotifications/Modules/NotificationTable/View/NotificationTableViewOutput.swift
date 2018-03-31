@@ -18,4 +18,5 @@ protocol NotificationTableViewOutput: class {
     
     func viewDidAppear()
  
+    func reloadNotificationData()
 }

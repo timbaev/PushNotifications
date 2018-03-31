@@ -23,6 +23,7 @@ class NotificationTableConfigurator {
         
         presenter.view = viewController
         presenter.interactor = interactor
+        presenter.router = router
         
         interactor.presenter = presenter
         interactor.notificationDataBaseManager = notificationDataBaseManager

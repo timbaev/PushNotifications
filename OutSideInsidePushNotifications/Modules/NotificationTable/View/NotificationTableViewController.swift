@@ -29,6 +29,7 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presenter.viewIsReady()
     }
 
@@ -39,13 +40,16 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     //MARK: - View input implementation
     
+    func setTableViewDelegate() {
+        self.tableView.delegate = self
+    }
+    
     func setCellModels(with notificationModels: [CellModel]) {
         inputDataSource.setCurrentNotification(with: notificationModels)
     }
    
     func connectTableWithDataSource() {
         tableView.dataSource = inputDataSource
-        tableView.delegate = inputDataSource
     }
     
     func registerCell() {
@@ -55,16 +59,23 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     //MARK: - Work with the table
     
-    func refreshNotificitaion() {
-        presenter.getNotifications()
+    func reloadTableView() {
         tableView.reloadData()
     }
     
     //MARK: - Refresh Method
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        presenter.reloadNotificationData()
         refreshControl.endRefreshing()
     }
 
+}
 
+extension NotificationTableViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 98
+    }
+    
 }

@@ -21,5 +21,8 @@ protocol NotificationTableViewInput: class {
     /// Retrieving data from Data Source 
     func connectTableWithDataSource()
     
-    func refreshNotificitaion()
+    func reloadTableView()
+    
+    func setTableViewDelegate() 
+
 }

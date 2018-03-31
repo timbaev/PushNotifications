@@ -43,6 +43,7 @@
 		FF20137D206EF65800EE01AB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20137B206EF65800EE01AB /* Result.swift */; };
 		FF20137F206EFC6700EE01AB /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20137E206EFC6700EE01AB /* NotificationModel.swift */; };
 		FF201380206EFF2D00EE01AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAC194D2067F21300B38ACE /* AppDelegate.swift */; };
+		FF20138220703EDA00EE01AB /* NotificationTableRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20138120703EDA00EE01AB /* NotificationTableRouterInput.swift */; };
 		FF8A1733206C167800242631 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A1732206C167800242631 /* NotificationManager.swift */; };
 		FF8A177B206C303B00242631 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8A177A206C303B00242631 /* NotificationService.swift */; };
 		FF8A177F206C303B00242631 /* NotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF8A1778206C303B00242631 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -115,6 +116,7 @@
 		FF20137A206EF65800EE01AB /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		FF20137B206EF65800EE01AB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FF20137E206EFC6700EE01AB /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		FF20138120703EDA00EE01AB /* NotificationTableRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableRouterInput.swift; sourceTree = "<group>"; };
 		FF8A1732206C167800242631 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FF8A173F206C2C4600242631 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		FF8A1741206C2C4600242631 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2008AE206DAF1D004E41DF /*  NotificationTableRouter.swift */,
+				FF20138120703EDA00EE01AB /* NotificationTableRouterInput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				FF2008A6206DA6AB004E41DF /* NotificationTableInteractorInput.swift in Sources */,
 				FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */,
+				FF20138220703EDA00EE01AB /* NotificationTableRouterInput.swift in Sources */,
 				FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */,
 				FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */,
 				FF20137F206EFC6700EE01AB /* NotificationModel.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 
 /// Data source input protocol
-protocol NotificationTableDataSourceInput: UITableViewDelegate, UITableViewDataSource {
+protocol NotificationTableDataSourceInput: UITableViewDataSource {
     
     /// Set all notifications in data source
     ///
