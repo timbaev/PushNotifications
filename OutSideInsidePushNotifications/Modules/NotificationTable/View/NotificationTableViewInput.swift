@@ -23,6 +23,6 @@ protocol NotificationTableViewInput: class {
     
     func reloadTableView()
     
-    func setTableViewDelegate() 
+    func setTableViewArguments()
 
 }

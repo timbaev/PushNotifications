@@ -19,7 +19,7 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     func viewIsReady() {
         getNotifications()
         view.registerCell()
-        view.setTableViewDelegate()
+        view.setTableViewArguments()
         view.connectTableWithDataSource()
     }
     

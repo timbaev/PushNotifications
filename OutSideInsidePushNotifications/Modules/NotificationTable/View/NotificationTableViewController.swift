@@ -40,8 +40,9 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     //MARK: - View input implementation
     
-    func setTableViewDelegate() {
+    func setTableViewArguments() {
         self.tableView.delegate = self
+        self.tableView.refreshControl = refreshControl
     }
     
     func setCellModels(with notificationModels: [CellModel]) {
