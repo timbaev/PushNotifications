@@ -25,4 +25,15 @@ protocol NotificationDatabaseManager: class {
     /// - Parameter notificationModel: model to delete
     func delete(_ notificationModel: NotificationModel)
     
+    /// Get notification at index
+    ///
+    /// - Parameter index: number of index
+    /// - Returns: notification model
+    func get(at index: Int) -> NotificationModel?
+    
+    /// Get last received notification
+    ///
+    /// - Returns: notification model
+    func getLast() -> NotificationModel?
+    
 }
