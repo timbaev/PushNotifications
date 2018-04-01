@@ -11,6 +11,21 @@
 		7CAC19532067F21300B38ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19512067F21300B38ACE /* Main.storyboard */; };
 		7CAC19552067F21300B38ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19542067F21300B38ACE /* Assets.xcassets */; };
 		7CAC19582067F21300B38ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CAC19562067F21300B38ACE /* LaunchScreen.storyboard */; };
+		CB11EE452070D1C20035AF09 /* LastImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE442070D1C20035AF09 /* LastImageViewController.swift */; };
+		CB11EE472070D1F50035AF09 /* LastImageViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE462070D1F50035AF09 /* LastImageViewInput.swift */; };
+		CB11EE492070D2220035AF09 /* LastImageViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE482070D2220035AF09 /* LastImageViewOutput.swift */; };
+		CB11EE4B2070D23F0035AF09 /* LastImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE4A2070D23F0035AF09 /* LastImagePresenter.swift */; };
+		CB11EE4E2070D2610035AF09 /* LastImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE4D2070D2610035AF09 /* LastImageInteractor.swift */; };
+		CB11EE502070D2780035AF09 /* LastImageInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE4F2070D2780035AF09 /* LastImageInteractorInput.swift */; };
+		CB11EE522070D2990035AF09 /* LastImageInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE512070D2990035AF09 /* LastImageInteractorOutput.swift */; };
+		CB11EE542070D2BB0035AF09 /* LastImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE532070D2BB0035AF09 /* LastImageRouter.swift */; };
+		CB11EE562070D2D20035AF09 /* LastImageRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE552070D2D20035AF09 /* LastImageRouterInput.swift */; };
+		CB11EE582070D2ED0035AF09 /* LastImageInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE572070D2ED0035AF09 /* LastImageInitializer.swift */; };
+		CB11EE5A2070D3510035AF09 /* LastImageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE592070D3510035AF09 /* LastImageConfigurator.swift */; };
+		CB11EE5D2070D3510035AF09 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */; };
+		CB11EE5F2070D3510035AF09 /* ImageDownloadManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */; };
+		CB11EE622070EF8E0035AF09 /* EnumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE612070EF8E0035AF09 /* EnumResult.swift */; };
+		CB11EE652070EFF50035AF09 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE642070EFF50035AF09 /* ImageModel.swift */; };
 		CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16A4C1206EBA0200637FB8 /* NotificationDatabaseManager.swift */; };
 		CB16A4C4206EBB9C00637FB8 /* NotificationManagerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16A4C3206EBB9C00637FB8 /* NotificationManagerImplementation.swift */; };
 		CB2428782069962D00261482 /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2428772069962D00261482 /* ModuleInput.swift */; };
@@ -82,6 +97,21 @@
 		7CAC19542067F21300B38ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CAC19572067F21300B38ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CAC19592067F21300B38ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB11EE442070D1C20035AF09 /* LastImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageViewController.swift; sourceTree = "<group>"; };
+		CB11EE462070D1F50035AF09 /* LastImageViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageViewInput.swift; sourceTree = "<group>"; };
+		CB11EE482070D2220035AF09 /* LastImageViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageViewOutput.swift; sourceTree = "<group>"; };
+		CB11EE4A2070D23F0035AF09 /* LastImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImagePresenter.swift; sourceTree = "<group>"; };
+		CB11EE4D2070D2610035AF09 /* LastImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageInteractor.swift; sourceTree = "<group>"; };
+		CB11EE4F2070D2780035AF09 /* LastImageInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageInteractorInput.swift; sourceTree = "<group>"; };
+		CB11EE512070D2990035AF09 /* LastImageInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageInteractorOutput.swift; sourceTree = "<group>"; };
+		CB11EE532070D2BB0035AF09 /* LastImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageRouter.swift; sourceTree = "<group>"; };
+		CB11EE552070D2D20035AF09 /* LastImageRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageRouterInput.swift; sourceTree = "<group>"; };
+		CB11EE572070D2ED0035AF09 /* LastImageInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageInitializer.swift; sourceTree = "<group>"; };
+		CB11EE592070D3510035AF09 /* LastImageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageConfigurator.swift; sourceTree = "<group>"; };
+		CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
+		CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManagerImpl.swift; sourceTree = "<group>"; };
+		CB11EE612070EF8E0035AF09 /* EnumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumResult.swift; sourceTree = "<group>"; };
+		CB11EE642070EFF50035AF09 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		CB16A4C1206EBA0200637FB8 /* NotificationDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDatabaseManager.swift; sourceTree = "<group>"; };
 		CB16A4C3206EBB9C00637FB8 /* NotificationManagerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerImplementation.swift; sourceTree = "<group>"; };
 		CB2428772069962D00261482 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
@@ -188,6 +218,90 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB11EE3E2070D1550035AF09 /* LastImage */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE632070EFE60035AF09 /* Entities */,
+				CB11EE432070D1900035AF09 /* Configurator */,
+				CB11EE422070D18A0035AF09 /* Router */,
+				CB11EE412070D1830035AF09 /* Interactor */,
+				CB11EE402070D1760035AF09 /* Presenter */,
+				CB11EE3F2070D16F0035AF09 /* View */,
+			);
+			path = LastImage;
+			sourceTree = "<group>";
+		};
+		CB11EE3F2070D16F0035AF09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE442070D1C20035AF09 /* LastImageViewController.swift */,
+				CB11EE462070D1F50035AF09 /* LastImageViewInput.swift */,
+				CB11EE482070D2220035AF09 /* LastImageViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB11EE402070D1760035AF09 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE4A2070D23F0035AF09 /* LastImagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CB11EE412070D1830035AF09 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE4D2070D2610035AF09 /* LastImageInteractor.swift */,
+				CB11EE4F2070D2780035AF09 /* LastImageInteractorInput.swift */,
+				CB11EE512070D2990035AF09 /* LastImageInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB11EE422070D18A0035AF09 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE532070D2BB0035AF09 /* LastImageRouter.swift */,
+				CB11EE552070D2D20035AF09 /* LastImageRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CB11EE432070D1900035AF09 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE572070D2ED0035AF09 /* LastImageInitializer.swift */,
+				CB11EE592070D3510035AF09 /* LastImageConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		CB11EE5B2070D3510035AF09 /* ImageDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */,
+				CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */,
+			);
+			path = ImageDownloadManager;
+			sourceTree = "<group>";
+		};
+		CB11EE602070EF270035AF09 /* EnumResult */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE612070EF8E0035AF09 /* EnumResult.swift */,
+			);
+			path = EnumResult;
+			sourceTree = "<group>";
+		};
+		CB11EE632070EFE60035AF09 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE642070EFF50035AF09 /* ImageModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CB16A4BD206E138200637FB8 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +342,7 @@
 		CB640AF0206936E00067F3C2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE3E2070D1550035AF09 /* LastImage */,
 				FF20087D206D4CFA004E41DF /* NotificationTable */,
 			);
 			path = Modules;
@@ -236,6 +351,7 @@
 		CB640AF1206937370067F3C2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE602070EF270035AF09 /* EnumResult */,
 				CB24287C20699A8E00261482 /* NotificationView */,
 				CB2428762069961200261482 /* ModuleInput */,
 				CB640AF7206937F50067F3C2 /* Storyboard */,
@@ -265,6 +381,7 @@
 		CB648DE5206AECC400009C23 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE5B2070D3510035AF09 /* ImageDownloadManager */,
 				FF8A1738206C287500242631 /* NotificationManager */,
 				CB648DE6206AECCB00009C23 /* NotificationDatabase */,
 			);
@@ -610,32 +727,47 @@
 				FF20089A206D8370004E41DF /* NotificationTableDataSourceInput.swift in Sources */,
 				FF20089E206DA00A004E41DF /* CellModel.swift in Sources */,
 				CB640AF62069377F0067F3C2 /* CommonAlertsFactory.swift in Sources */,
+				CB11EE582070D2ED0035AF09 /* LastImageInitializer.swift in Sources */,
 				FF2008A4206DA692004E41DF /* NotificationTableInteractor.swift in Sources */,
+				CB11EE472070D1F50035AF09 /* LastImageViewInput.swift in Sources */,
+				CB11EE622070EF8E0035AF09 /* EnumResult.swift in Sources */,
 				FF2008A8206DA6B9004E41DF /* NotificationTableInteractorOutput.swift in Sources */,
 				FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */,
 				FF2008A2206DA679004E41DF /* NotificationTablePresenter.swift in Sources */,
+				CB11EE562070D2D20035AF09 /* LastImageRouterInput.swift in Sources */,
+				CB11EE522070D2990035AF09 /* LastImageInteractorOutput.swift in Sources */,
 				FF2008AB206DA7B3004E41DF /* NotificationTableConfigurator.swift in Sources */,
+				CB11EE492070D2220035AF09 /* LastImageViewOutput.swift in Sources */,
 				CB640AFB206938390067F3C2 /* Storyboards.swift in Sources */,
 				FF2008AD206DA9DA004E41DF /* NotificationTableInitializer.swift in Sources */,
+				CB11EE542070D2BB0035AF09 /* LastImageRouter.swift in Sources */,
 				CB24287E20699ABD00261482 /* NotificationView.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				FF2008A6206DA6AB004E41DF /* NotificationTableInteractorInput.swift in Sources */,
+				CB11EE4B2070D23F0035AF09 /* LastImagePresenter.swift in Sources */,
 				FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */,
 				FF20138220703EDA00EE01AB /* NotificationTableRouterInput.swift in Sources */,
+				CB11EE5A2070D3510035AF09 /* LastImageConfigurator.swift in Sources */,
+				CB11EE502070D2780035AF09 /* LastImageInteractorInput.swift in Sources */,
 				FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */,
 				FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */,
 				FF20137F206EFC6700EE01AB /* NotificationModel.swift in Sources */,
 				FF20137C206EF65800EE01AB /* UIImageViewExtension.swift in Sources */,
+				CB11EE4E2070D2610035AF09 /* LastImageInteractor.swift in Sources */,
 				CB16A4C4206EBB9C00637FB8 /* NotificationManagerImplementation.swift in Sources */,
 				CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */,
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
+				CB11EE5D2070D3510035AF09 /* ImageDownloadManager.swift in Sources */,
+				CB11EE652070EFF50035AF09 /* ImageModel.swift in Sources */,
 				FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */,
 				FF20137D206EF65800EE01AB /* Result.swift in Sources */,
 				FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */,
+				CB11EE5F2070D3510035AF09 /* ImageDownloadManagerImpl.swift in Sources */,
 				FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */,
 				CB648DEE206AEDFC00009C23 /* NotificationRealm.swift in Sources */,
 				FF8A1733206C167800242631 /* NotificationManager.swift in Sources */,
 				CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */,
+				CB11EE452070D1C20035AF09 /* LastImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
