@@ -10,5 +10,7 @@ import Foundation
 
 protocol LastImageViewOutput: class {
     
+    /// View did load trigger
+    func viewIsReady()
     
 }

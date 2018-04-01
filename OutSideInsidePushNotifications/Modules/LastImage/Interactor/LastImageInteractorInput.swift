@@ -10,6 +10,7 @@ import Foundation
 
 protocol LastImageInteractorInput: class {
     
-    
+    /// Load last image
+    func loadLastImage()
     
 }

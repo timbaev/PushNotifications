@@ -15,6 +15,10 @@ class LastImageConfigurator {
         let interactor = LastImageInteractor()
         let router = LastImageRouter()
         
+        let databaseManager = RealmNotificationDatabaseManager()
+        let imageDownloadManager = ImageDownloadManagerImpl()
+        let commonAlertsFactory = CommonAlertsFactoryImpl()
+        
         viewController.presenter = presenter
         
         presenter.view = viewController
@@ -22,8 +26,11 @@ class LastImageConfigurator {
         presenter.router = router
         
         interactor.presenter = presenter
+        interactor.databaseManager = databaseManager
+        interactor.imageDownloadManager = imageDownloadManager
         
         router.viewController = viewController
+        router.commonAlertsFactory = commonAlertsFactory
     }
     
 }

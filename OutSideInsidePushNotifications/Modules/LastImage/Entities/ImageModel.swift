@@ -1,5 +1,5 @@
 //
-//  LastImageViewInput.swift
+//  PhotoModel.swift
 //  OutSideInsidePushNotifications
 //
 //  Created by Тимур Шафигуллин on 01.04.2018.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-protocol LastImageViewInput: class {
+struct ImageModel {
     
-     /// Set last image to view
-     ///
-     /// - Parameter lastImage: image
-     func set(lastImage: UIImage)
+    let image: UIImage
+    
+    init(image: UIImage = #imageLiteral(resourceName: "no-image")) {
+        self.image = image
+    }
     
 }

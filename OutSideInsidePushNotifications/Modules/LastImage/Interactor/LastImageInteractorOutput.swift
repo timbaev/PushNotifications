@@ -10,6 +10,9 @@ import Foundation
 
 protocol LastImageInteractorOutput: class {
     
-    
+    /// Finish loading of image
+    ///
+    /// - Parameter result: enum with results
+    func didFinishLoadImage(with result: EnumResult<ImageModel>)
     
 }

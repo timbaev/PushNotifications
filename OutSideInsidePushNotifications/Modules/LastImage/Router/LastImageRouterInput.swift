@@ -10,5 +10,6 @@ import Foundation
 
 protocol LastImageRouterInput: class {
     
+    func showErrorAlert(with message: String)
     
 }

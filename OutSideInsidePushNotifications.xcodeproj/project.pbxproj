@@ -22,6 +22,10 @@
 		CB11EE562070D2D20035AF09 /* LastImageRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE552070D2D20035AF09 /* LastImageRouterInput.swift */; };
 		CB11EE582070D2ED0035AF09 /* LastImageInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE572070D2ED0035AF09 /* LastImageInitializer.swift */; };
 		CB11EE5A2070D3510035AF09 /* LastImageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE592070D3510035AF09 /* LastImageConfigurator.swift */; };
+		CB11EE5D2070D3510035AF09 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */; };
+		CB11EE5F2070D3510035AF09 /* ImageDownloadManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */; };
+		CB11EE622070EF8E0035AF09 /* EnumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE612070EF8E0035AF09 /* EnumResult.swift */; };
+		CB11EE652070EFF50035AF09 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11EE642070EFF50035AF09 /* ImageModel.swift */; };
 		CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16A4C1206EBA0200637FB8 /* NotificationDatabaseManager.swift */; };
 		CB16A4C4206EBB9C00637FB8 /* NotificationManagerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16A4C3206EBB9C00637FB8 /* NotificationManagerImplementation.swift */; };
 		CB2428782069962D00261482 /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2428772069962D00261482 /* ModuleInput.swift */; };
@@ -104,6 +108,10 @@
 		CB11EE552070D2D20035AF09 /* LastImageRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageRouterInput.swift; sourceTree = "<group>"; };
 		CB11EE572070D2ED0035AF09 /* LastImageInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageInitializer.swift; sourceTree = "<group>"; };
 		CB11EE592070D3510035AF09 /* LastImageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastImageConfigurator.swift; sourceTree = "<group>"; };
+		CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
+		CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManagerImpl.swift; sourceTree = "<group>"; };
+		CB11EE612070EF8E0035AF09 /* EnumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumResult.swift; sourceTree = "<group>"; };
+		CB11EE642070EFF50035AF09 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		CB16A4C1206EBA0200637FB8 /* NotificationDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDatabaseManager.swift; sourceTree = "<group>"; };
 		CB16A4C3206EBB9C00637FB8 /* NotificationManagerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerImplementation.swift; sourceTree = "<group>"; };
 		CB2428772069962D00261482 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 		CB11EE3E2070D1550035AF09 /* LastImage */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE632070EFE60035AF09 /* Entities */,
 				CB11EE432070D1900035AF09 /* Configurator */,
 				CB11EE422070D18A0035AF09 /* Router */,
 				CB11EE412070D1830035AF09 /* Interactor */,
@@ -268,6 +277,31 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		CB11EE5B2070D3510035AF09 /* ImageDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE5C2070D3510035AF09 /* ImageDownloadManager.swift */,
+				CB11EE5E2070D3510035AF09 /* ImageDownloadManagerImpl.swift */,
+			);
+			path = ImageDownloadManager;
+			sourceTree = "<group>";
+		};
+		CB11EE602070EF270035AF09 /* EnumResult */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE612070EF8E0035AF09 /* EnumResult.swift */,
+			);
+			path = EnumResult;
+			sourceTree = "<group>";
+		};
+		CB11EE632070EFE60035AF09 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CB11EE642070EFF50035AF09 /* ImageModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CB16A4BD206E138200637FB8 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +351,7 @@
 		CB640AF1206937370067F3C2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE602070EF270035AF09 /* EnumResult */,
 				CB24287C20699A8E00261482 /* NotificationView */,
 				CB2428762069961200261482 /* ModuleInput */,
 				CB640AF7206937F50067F3C2 /* Storyboard */,
@@ -346,6 +381,7 @@
 		CB648DE5206AECC400009C23 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CB11EE5B2070D3510035AF09 /* ImageDownloadManager */,
 				FF8A1738206C287500242631 /* NotificationManager */,
 				CB648DE6206AECCB00009C23 /* NotificationDatabase */,
 			);
@@ -694,6 +730,7 @@
 				CB11EE582070D2ED0035AF09 /* LastImageInitializer.swift in Sources */,
 				FF2008A4206DA692004E41DF /* NotificationTableInteractor.swift in Sources */,
 				CB11EE472070D1F50035AF09 /* LastImageViewInput.swift in Sources */,
+				CB11EE622070EF8E0035AF09 /* EnumResult.swift in Sources */,
 				FF2008A8206DA6B9004E41DF /* NotificationTableInteractorOutput.swift in Sources */,
 				FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */,
 				FF2008A2206DA679004E41DF /* NotificationTablePresenter.swift in Sources */,
@@ -720,9 +757,12 @@
 				CB16A4C4206EBB9C00637FB8 /* NotificationManagerImplementation.swift in Sources */,
 				CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */,
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
+				CB11EE5D2070D3510035AF09 /* ImageDownloadManager.swift in Sources */,
+				CB11EE652070EFF50035AF09 /* ImageModel.swift in Sources */,
 				FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */,
 				FF20137D206EF65800EE01AB /* Result.swift in Sources */,
 				FF2008AF206DAF1D004E41DF /*  NotificationTableRouter.swift in Sources */,
+				CB11EE5F2070D3510035AF09 /* ImageDownloadManagerImpl.swift in Sources */,
 				FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */,
 				CB648DEE206AEDFC00009C23 /* NotificationRealm.swift in Sources */,
 				FF8A1733206C167800242631 /* NotificationManager.swift in Sources */,

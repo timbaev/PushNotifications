@@ -10,10 +10,19 @@ import UIKit
 
 class LastImageViewController: UIViewController, LastImageViewInput {
     
+    @IBOutlet weak var lastImageView: UIImageView!
+    
     var presenter: LastImageViewOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewIsReady()
+    }
+    
+    //MARK: - View input
+    
+    func set(lastImage: UIImage) {
+        lastImageView.image = lastImage
     }
 
 }
