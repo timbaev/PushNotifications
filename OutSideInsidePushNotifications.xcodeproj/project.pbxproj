@@ -798,8 +798,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.pushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bf0c2429-561b-4052-973d-61318c1696a3";
-				PROVISIONING_PROFILE_SPECIFIER = "Push Notifications TimDam";
+				PROVISIONING_PROFILE = "64e309c0-0d35-479a-8c0a-87cd6a69d583";
+				PROVISIONING_PROFILE_SPECIFIER = "TimDam Notifications";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

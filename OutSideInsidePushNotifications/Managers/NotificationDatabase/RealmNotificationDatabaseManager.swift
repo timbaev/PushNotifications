@@ -52,6 +52,19 @@ class RealmNotificationDatabaseManager: NotificationDatabaseManager {
         }
     }
     
+    func get(at index: Int) -> NotificationModel? {
+        guard let realm = self.realm else { return nil }
+        let notificationsRealm = realm.objects(NotificationRealm.self).sorted(byKeyPath: #keyPath(NotificationRealm.created), ascending: false)
+        return self.toModel(from: notificationsRealm[index])
+    }
+    
+    func getLast() -> NotificationModel? {
+        guard let realm = self.realm else { return nil }
+        let notificationsRealm = realm.objects(NotificationRealm.self).sorted(byKeyPath: #keyPath(NotificationRealm.created), ascending: true)
+        guard let notificationRealm = notificationsRealm.last else { return nil }
+        return self.toModel(from: notificationRealm)
+    }
+    
 }
 
 // MARK: - Helpers methods convert from realm object to model and reverse
