@@ -12,7 +12,7 @@ struct NotificationModel: Codable {
     
     let title: String?
     let text: String?
-    let imageURL: URL?
+    var imageURL: URL?
     let created: Date
     
     init(title: String?, text: String?, imageURL: URL?, created: Date = Date()) {
@@ -25,13 +25,23 @@ struct NotificationModel: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let aps = try values.nestedContainer(keyedBy: ApsCodingKeys.self, forKey: .aps)
-        let data = try values.nestedContainer(keyedBy: DataCodingKeys.self, forKey: .data)
         
-        let alert = try aps.nestedContainer(keyedBy: AlertCodingKeys.self, forKey: .alert)
-        title = try alert.decodeIfPresent(String.self, forKey: .title)
-        text = try alert.decodeIfPresent(String.self, forKey: .body)
-        
-        imageURL = try data.decodeIfPresent(URL.self, forKey: .attachmentURL)
+        do {
+            let alertText = try aps.decodeIfPresent(String.self, forKey: .alert)
+            title = alertText
+            imageURL = nil
+            text = nil
+        } catch {
+            let alert = try aps.nestedContainer(keyedBy: AlertCodingKeys.self, forKey: .alert)
+            title = try alert.decodeIfPresent(String.self, forKey: .title)
+            text = try alert.decodeIfPresent(String.self, forKey: .body)
+            imageURL = nil
+            
+            if values.contains(.data) {
+                let data = try values.nestedContainer(keyedBy: DataCodingKeys.self, forKey: .data)
+                imageURL = try data.decodeIfPresent(URL.self, forKey: .attachmentURL)
+            }
+        }
         
         created = Date()
     }
