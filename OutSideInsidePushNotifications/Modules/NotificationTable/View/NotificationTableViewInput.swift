@@ -26,5 +26,12 @@ protocol NotificationTableViewInput: class {
     
     /// Initialization table view arguments (delegate, refreshControl)
     func setTableViewArguments()
+    
+    /// Set downloaded image to cell
+    ///
+    /// - Parameters:
+    ///   - loadedImage: downloaded image from URL
+    ///   - indexPath: index of cell
+    func set(image loadedImage: UIImage, to indexPath: IndexPath)
 
 }

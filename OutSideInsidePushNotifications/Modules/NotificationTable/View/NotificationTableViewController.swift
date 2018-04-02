@@ -16,7 +16,6 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     let notificationCellIdentifier = "notificationCell"
     let notificationCellNibIdentifier = "NotificationTableViewCell"
-    let cellHeight = CGFloat(89)
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -28,15 +27,26 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
         return refreshControl
     }()
     
+    //MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         presenter.viewIsReady()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         presenter.viewDidAppear()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.subscripeToNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.unsubscripeFromNotifications()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,11 +71,19 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     func connectTableWithDataSource() {
         tableView.dataSource = inputDataSource
+        inputDataSource.downloadImageDelegate = presenter as? DownloadImageDelegate
+        inputDataSource.deleteRowDelegate = presenter as? DeleteRowDelegate
     }
     
     func setTableViewArguments() {
         self.tableView.delegate = self
         self.tableView.refreshControl = refreshControl
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func set(image loadedImage: UIImage, to indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        inputDataSource.set(image: loadedImage, to: cell)
     }
     
     //MARK: - Refresh Method
@@ -78,10 +96,6 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
 }
 
 extension NotificationTableViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeight
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectNotification(at: indexPath)

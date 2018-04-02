@@ -23,4 +23,11 @@ protocol NotificationTableViewOutput: class {
     ///
     /// - Parameter indexPath: at index path
     func didSelectNotification(at indexPath: IndexPath)
+    
+    /// Handle new push notifications
+    func subscripeToNotifications()
+    
+    /// Stop handling new push notification
+    func unsubscripeFromNotifications()
+
 }

@@ -34,6 +34,14 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     func didSelectNotification(at indexPath: IndexPath) {
         router.showDetailScreen(with: indexPath.row)
     }
+    
+    func subscripeToNotifications() {
+        interactor.subscripeToNotifications()
+    }
+    
+    func unsubscripeFromNotifications() {
+        interactor.unsubscripeFromNotifications()
+    }
  
     // MARK: - Interactor output implementation
     
@@ -47,6 +55,23 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
             //возможно кинуть аллерт или ничего не делать
             break
         }
+    }
     
+    func didFinishLoadImage(at indexPath: IndexPath, with imageModel: ImageModel) {
+        view.set(image: imageModel.image, to: indexPath)
+    }
+}
+
+extension NotificationTablePresenter: DownloadImageDelegate {
+    
+    func downloadImage(for url: URL, at indexPath: IndexPath) {
+        interactor.downloadImage(from: url, at: indexPath)
+    }
+}
+
+extension NotificationTablePresenter: DeleteRowDelegate {
+    
+    func didDeleteRow(at indexPath: IndexPath) {
+        interactor.deleteNotification(with: indexPath.row)
     }
 }

@@ -13,9 +13,11 @@ class NotificationTableConfigurator {
     func setupModule(with viewController: NotificationTableViewController) {
         let presenter = NotificationTablePresenter()
         let interactor = NotificationTableInteractor()
+        let router = NotificationTableRouter()
+        
         let notificationDataBaseManager = RealmNotificationDatabaseManager()
         let inputDataSource = NotificationTableDataSource()
-        let router = NotificationTableRouter()
+        let imageDownloadManager = ImageDownloadManagerImpl()
         
         viewController.presenter = presenter
         viewController.inputDataSource = inputDataSource
@@ -26,6 +28,7 @@ class NotificationTableConfigurator {
         
         interactor.presenter = presenter
         interactor.notificationDataBaseManager = notificationDataBaseManager
+        interactor.imageDownloadManager = imageDownloadManager
         
         router.viewController = viewController
     }
