@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" rowHeight="83" id="KGk-i7-Jjw" customClass="NotificationTableViewCell" customModule="OutSideInsidePushNotifications" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="82.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="WLM-T8-PtJ">
+                        <rect key="frame" x="8" y="11.5" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="dax-ZR-tTf"/>
+                            <constraint firstAttribute="height" constant="60" id="nKX-F3-bAC"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tvn-EC-pg5">
+                        <rect key="frame" x="76" y="8" width="236" height="66.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-fP-gyA">
+                                <rect key="frame" x="0.0" y="0.0" width="236" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-Ny-H8N">
+                                <rect key="frame" x="0.0" y="46" width="236" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WLM-T8-PtJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="11d-OM-TT8"/>
+                    <constraint firstItem="Tvn-EC-pg5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1Vo-u8-oOl"/>
+                    <constraint firstAttribute="bottom" secondItem="WLM-T8-PtJ" secondAttribute="bottom" priority="750" constant="8" id="G60-yW-boB"/>
+                    <constraint firstAttribute="bottom" secondItem="Tvn-EC-pg5" secondAttribute="bottom" constant="8" id="MMK-43-XoM"/>
+                    <constraint firstAttribute="trailing" secondItem="Tvn-EC-pg5" secondAttribute="trailing" constant="8" id="NiC-T5-hiK"/>
+                    <constraint firstItem="WLM-T8-PtJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZAT-rI-p4u"/>
+                    <constraint firstItem="Tvn-EC-pg5" firstAttribute="leading" secondItem="WLM-T8-PtJ" secondAttribute="trailing" constant="8" id="mln-iU-c36"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="notificationImageView" destination="WLM-T8-PtJ" id="jLU-OL-5eD"/>
+                <outlet property="notificationTextLabel" destination="wkN-Ny-H8N" id="PSv-PK-ytB"/>
+                <outlet property="notificationTitleLabel" destination="gsp-fP-gyA" id="BKe-Je-RuD"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="76.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="no-image" width="596" height="596"/>
+    </resources>
+</document>
