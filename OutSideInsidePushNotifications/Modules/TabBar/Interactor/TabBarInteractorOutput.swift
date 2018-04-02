@@ -10,6 +10,7 @@ import Foundation
 
 protocol TabBarInteractorOutput: class {
     
+    /// Show detail information about notification
     func showDeatilScreen()
     
 }

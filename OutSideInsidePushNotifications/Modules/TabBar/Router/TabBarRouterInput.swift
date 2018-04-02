@@ -10,6 +10,9 @@ import Foundation
 
 protocol TabBarRouterInput: class {
     
+    /// Showing details about notification
+    ///
+    /// - Parameter notificationIndex: index of notification
     func showDeatilScreen(with notificationIndex: Int)
     
 }

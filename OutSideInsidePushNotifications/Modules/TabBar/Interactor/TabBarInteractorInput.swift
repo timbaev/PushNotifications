@@ -10,7 +10,12 @@ import Foundation
 
 protocol TabBarInteractorInput: class {
     
+    /// Subscribe to notifications
+    ///
+    /// - Parameter name: notification name
     func registerNotification(with name: String)
-    func removeObserver() 
+    
+    /// Unsubscribe from all notifications
+    func removeObserver()
     
 }
