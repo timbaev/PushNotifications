@@ -10,6 +10,13 @@ import Foundation
 
 protocol NotificationTableInteractorInput: class {
     
-    // Get notifications
+    /// Get notifications
     func getNotifications()
+    
+    /// Download image in cell
+    ///
+    /// - Parameters:
+    ///   - url: URL of image
+    ///   - indexPath: index of cell
+    func downloadImage(from url: URL, at indexPath: IndexPath)
 }

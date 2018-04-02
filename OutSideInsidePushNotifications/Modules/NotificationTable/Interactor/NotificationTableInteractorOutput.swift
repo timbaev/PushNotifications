@@ -14,4 +14,11 @@ protocol NotificationTableInteractorOutput: class {
     ///
     /// - Parameter result: result
     func didFinishingToGetNotifications(with result: Result<NotificationCellModel>)
+    
+    /// Finish loading image from URL
+    ///
+    /// - Parameters:
+    ///   - indexPath: index of cell, which download image
+    ///   - imageModel: imageModel with UIImage inside
+    func didFinishLoadImage(at indexPath: IndexPath, with imageModel: ImageModel)
 }

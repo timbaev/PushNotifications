@@ -61,6 +61,7 @@
 		CB82582B2072399C000B0E65 /* TabBarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */; };
 		CB82582D207239BA000B0E65 /* TabBarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */; };
 		CB825830207281AD000B0E65 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */; };
+		CB82583220728E12000B0E65 /* DownloadImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82583120728E12000B0E65 /* DownloadImageDelegate.swift */; };
 		FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200883206D4E32004E41DF /* NotificationTableViewController.swift */; };
 		FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200886206D564F004E41DF /* NotificationTableDataSource.swift */; };
 		FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200889206D5736004E41DF /* NotificationTableViewCell.swift */; };
@@ -171,6 +172,7 @@
 		CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorInput.swift; sourceTree = "<group>"; };
 		CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorOutput.swift; sourceTree = "<group>"; };
 		CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		CB82583120728E12000B0E65 /* DownloadImageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageDelegate.swift; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF200883206D4E32004E41DF /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -663,6 +665,7 @@
 			children = (
 				FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */,
 				FF200886206D564F004E41DF /* NotificationTableDataSource.swift */,
+				CB82583120728E12000B0E65 /* DownloadImageDelegate.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 				CB11EE542070D2BB0035AF09 /* LastImageRouter.swift in Sources */,
 				CB24287E20699ABD00261482 /* NotificationView.swift in Sources */,
 				CB82581B207231AF000B0E65 /* TabBarViewOutput.swift in Sources */,
+				CB82583220728E12000B0E65 /* DownloadImageDelegate.swift in Sources */,
 				CB640AF52069377F0067F3C2 /* CommonAlertsFactoryImpl.swift in Sources */,
 				CB82581920723197000B0E65 /* TabBarViewInput.swift in Sources */,
 				CB8258242072321C000B0E65 /* TabBarInitializer.swift in Sources */,

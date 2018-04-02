@@ -12,23 +12,28 @@ class NotificationTableInteractor: NotificationTableInteractorInput {
     
     weak var presenter: NotificationTableInteractorOutput!
     var notificationDataBaseManager: NotificationDatabaseManager!
+    var imageDownloadManager: ImageDownloadManager!
     
     //MARK: - Interactor input implementation
     
     func getNotifications() {
         guard let notifications = notificationDataBaseManager.getAll() else { return  }
-        var notificationsCellModel = [NotificationCellModel]()
-        
-        for notification in notifications {
-            notificationsCellModel.append(NotificationCellModel(text: notification.text, title: notification.title, imageURL: notification.imageURL))
+        let notificationsCellModel = notifications.map {
+            NotificationCellModel(text: $0.text, title: $0.title, imageURL: $0.imageURL)
         }
-
-        let url1 = URL(fileURLWithPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVHnduiEy1vr-JySv1ekN_lSccJ0SdVQqYR0ZDYAxstNW_MDej")
-        let url2 = URL(fileURLWithPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMkqmxteqE9oqD_1KELbJSJKKeMUYtVFWsMFtSQt6BZI-cYh-l")
         
-        notificationsCellModel.append(NotificationCellModel(text: "1", title: "1", imageURL: url1))
-        notificationsCellModel.append(NotificationCellModel(text: "2", title: "2", imageURL: url2))
         presenter.didFinishingToGetNotifications(with: .success(notificationsCellModel))
+    }
+    
+    func downloadImage(from url: URL, at indexPath: IndexPath) {
+        imageDownloadManager.downloadImage(from: url, success: { [weak self] (image) in
+            guard let strongSelf = self else { return }
+            guard let image = image else { return }
+            let imageModel = ImageModel(image: image)
+            strongSelf.presenter.didFinishLoadImage(at: indexPath, with: imageModel)
+        }) { (errorMessage) in
+            print("Failed download image at index \(indexPath.row) with URL: \(url.absoluteString)")
+        }
     }
     
 }

@@ -47,6 +47,17 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
             //возможно кинуть аллерт или ничего не делать
             break
         }
-    
     }
+    
+    func didFinishLoadImage(at indexPath: IndexPath, with imageModel: ImageModel) {
+        view.set(image: imageModel.image, to: indexPath)
+    }
+}
+
+extension NotificationTablePresenter: DownloadImageDelegate {
+    
+    func downloadImage(for url: URL, at indexPath: IndexPath) {
+        interactor.downloadImage(from: url, at: indexPath)
+    }
+    
 }

@@ -61,11 +61,18 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     func connectTableWithDataSource() {
         tableView.dataSource = inputDataSource
+        inputDataSource.downloadImageDelegate = presenter as? DownloadImageDelegate
     }
     
     func setTableViewArguments() {
         self.tableView.delegate = self
         self.tableView.refreshControl = refreshControl
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func set(image loadedImage: UIImage, to indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        inputDataSource.set(image: loadedImage, to: cell)
     }
     
     //MARK: - Refresh Method
@@ -78,10 +85,6 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
 }
 
 extension NotificationTableViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeight
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectNotification(at: indexPath)
