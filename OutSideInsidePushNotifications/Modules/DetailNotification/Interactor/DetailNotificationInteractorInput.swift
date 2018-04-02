@@ -10,10 +10,13 @@ import Foundation
 
 protocol DetailNotificationInteractorInput: class {
     
-    /// Get notification model at index
+    /// Configure module with init parameters
     ///
-    /// - Parameter index: index of model
-    func getModel(with index: Int)
+    /// - Parameter index: index of notification model
+    func configure(with index: Int)
+    
+    /// Get notification model at index
+    func getModel()
     
     /// Download image from url address
     ///

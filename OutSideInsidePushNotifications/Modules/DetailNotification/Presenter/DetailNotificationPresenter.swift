@@ -18,7 +18,13 @@ class DetailNotificationPresenter: DetailNotificationViewOutput, DetailNotificat
     
     func setData(_ data: Any?) {
         guard let index = data as? Int else { return }
-        interactor.getModel(with: index)
+        interactor.configure(with: index)
+    }
+    
+    //MARK: - View output
+    
+    func viewIsReady() {
+        interactor.getModel()
     }
     
     //MARK: - Interactor output

@@ -10,5 +10,7 @@ import Foundation
 
 protocol DetailNotificationViewOutput: class {
     
+     /// View did load trigger
+     func viewIsReady()
     
 }

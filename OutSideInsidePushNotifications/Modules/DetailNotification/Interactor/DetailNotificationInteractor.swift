@@ -10,11 +10,18 @@ import Foundation
 
 class DetailNotificationInteractor: DetailNotificationInteractorInput {
     
+    private var currentIndex: Int?
+    
     weak var presenter: DetailNotificationInteractorOutput!
     var databaseManager: NotificationDatabaseManager!
     var imageDownloadManager: ImageDownloadManager!
     
-    func getModel(with index: Int) {
+    func configure(with index: Int) {
+        currentIndex = index
+    }
+    
+    func getModel() {
+        guard let index = currentIndex else { return }
         guard let notificationModel = databaseManager.get(at: index) else { return }
         presenter.didFinishGettingModel(with: notificationModel)
     }

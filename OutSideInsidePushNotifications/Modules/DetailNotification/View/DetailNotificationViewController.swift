@@ -22,6 +22,7 @@ class DetailNotificationViewController: UIViewController, DetailNotificationView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewIsReady()
     }
     
     //MARK: - View input
