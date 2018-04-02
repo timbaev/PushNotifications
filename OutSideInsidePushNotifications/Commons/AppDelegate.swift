@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var notificationsNavControllerIndex = 1
     var showDetailSegueIdentifier = "showDetailScreen"
     var indexOfNewNotification = 0
+    var notificationName = "newPushNotif"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -85,10 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notificationManager?.reciveNotification(with: dataInfo)
         
         if application.applicationState != .active {
-            guard let topController = application.keyWindow?.rootViewController as? UITabBarController else { return }
-            let notificationsNavController = topController.viewControllers?[notificationsNavControllerIndex] as? UINavigationController
-            let notificationsViewController = notificationsNavController?.topViewController as? NotificationTableViewController
-            notificationsViewController?.performSegue(withIdentifier: showDetailSegueIdentifier, sender: indexOfNewNotification)
+            NotificationCenter.default.post(name: .init(notificationName), object: nil)
         }
     }
     

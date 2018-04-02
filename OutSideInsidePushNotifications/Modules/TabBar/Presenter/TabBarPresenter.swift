@@ -8,9 +8,10 @@
 
 import Foundation
 
-class TabBarPresenter: TabBarViewOutput {
+class TabBarPresenter: TabBarViewOutput, TabBarInteractorOutput {
     
     weak var view: TabBarViewInput!
+    var interactor: TabBarInteractorInput!
     var router: TabBarRouterInput!
     
     let firstNotificationIndex = 0
@@ -19,6 +20,14 @@ class TabBarPresenter: TabBarViewOutput {
     
     func showDeatilScreen() {
         router.showDeatilScreen(with: firstNotificationIndex)
+    }
+    
+    func registerNotification(with name: String) {
+        interactor.registerNotification(with: name)
+    }
+    
+    func unregisterNotifications() {
+        interactor.removeObserver()
     }
     
 }

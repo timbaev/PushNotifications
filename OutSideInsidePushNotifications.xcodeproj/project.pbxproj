@@ -57,6 +57,9 @@
 		CB825821207231F2000B0E65 /* TabBarRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB825820207231F2000B0E65 /* TabBarRouterInput.swift */; };
 		CB8258242072321C000B0E65 /* TabBarInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8258232072321C000B0E65 /* TabBarInitializer.swift */; };
 		CB8258262072324B000B0E65 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8258252072324B000B0E65 /* TabBarConfigurator.swift */; };
+		CB82582920723983000B0E65 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582820723983000B0E65 /* TabBarInteractor.swift */; };
+		CB82582B2072399C000B0E65 /* TabBarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */; };
+		CB82582D207239BA000B0E65 /* TabBarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */; };
 		FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200883206D4E32004E41DF /* NotificationTableViewController.swift */; };
 		FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200886206D564F004E41DF /* NotificationTableDataSource.swift */; };
 		FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200889206D5736004E41DF /* NotificationTableViewCell.swift */; };
@@ -163,6 +166,9 @@
 		CB825820207231F2000B0E65 /* TabBarRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouterInput.swift; sourceTree = "<group>"; };
 		CB8258232072321C000B0E65 /* TabBarInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInitializer.swift; sourceTree = "<group>"; };
 		CB8258252072324B000B0E65 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
+		CB82582820723983000B0E65 /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorInput.swift; sourceTree = "<group>"; };
+		CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorOutput.swift; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF200883206D4E32004E41DF /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -515,6 +521,7 @@
 		CB82581220722675000B0E65 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CB82582720723972000B0E65 /* Interactor */,
 				CB8258222072320C000B0E65 /* Configurator */,
 				CB825815207226A0000B0E65 /* Router */,
 				CB8258142072269A000B0E65 /* Presenter */,
@@ -557,6 +564,16 @@
 				CB8258252072324B000B0E65 /* TabBarConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		CB82582720723972000B0E65 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB82582820723983000B0E65 /* TabBarInteractor.swift */,
+				CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */,
+				CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		CFDE61CFFB4266C4F1254880 /* Pods */ = {
@@ -896,6 +913,7 @@
 				FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */,
 				FF20138220703EDA00EE01AB /* NotificationTableRouterInput.swift in Sources */,
 				CB8257FC20718157000B0E65 /* DetailNotificationViewController.swift in Sources */,
+				CB82582D207239BA000B0E65 /* TabBarInteractorOutput.swift in Sources */,
 				CB11EE5A2070D3510035AF09 /* LastImageConfigurator.swift in Sources */,
 				CB11EE502070D2780035AF09 /* LastImageInteractorInput.swift in Sources */,
 				FF200892206D613D004E41DF /* NotificationTableViewInput.swift in Sources */,
@@ -911,6 +929,7 @@
 				CB16A4C2206EBA0200637FB8 /* NotificationDatabaseManager.swift in Sources */,
 				CB2428782069962D00261482 /* ModuleInput.swift in Sources */,
 				CB11EE5D2070D3510035AF09 /* ImageDownloadManager.swift in Sources */,
+				CB82582B2072399C000B0E65 /* TabBarInteractorInput.swift in Sources */,
 				CB82580A20718232000B0E65 /* DetailNotificationRouter.swift in Sources */,
 				CB11EE652070EFF50035AF09 /* ImageModel.swift in Sources */,
 				FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */,
@@ -920,6 +939,7 @@
 				CB11EE5F2070D3510035AF09 /* ImageDownloadManagerImpl.swift in Sources */,
 				FF2008A0206DA3AF004E41DF /* NotificationCellModel.swift in Sources */,
 				CB648DEE206AEDFC00009C23 /* NotificationRealm.swift in Sources */,
+				CB82582920723983000B0E65 /* TabBarInteractor.swift in Sources */,
 				CB82580E2071826D000B0E65 /* DetailNotificationConfigurator.swift in Sources */,
 				FF8A1733206C167800242631 /* NotificationManager.swift in Sources */,
 				CB640AFA206938390067F3C2 /* ReusableView.swift in Sources */,

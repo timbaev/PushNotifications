@@ -1,5 +1,5 @@
 //
-//  TabBarViewOutput.swift
+//  TabBarInteractorInput.swift
 //  OutSideInsidePushNotifications
 //
 //  Created by Тимур Шафигуллин on 02.04.2018.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol TabBarViewOutput: class {
+protocol TabBarInteractorInput: class {
     
     func registerNotification(with name: String)
-    func unregisterNotifications()
+    func removeObserver() 
     
 }
