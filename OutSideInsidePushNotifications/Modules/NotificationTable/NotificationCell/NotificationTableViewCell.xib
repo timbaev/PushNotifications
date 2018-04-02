@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="WLM-T8-PtJ">
-                        <rect key="frame" x="8" y="6.5" width="60" height="60"/>
+                        <rect key="frame" x="8" y="11.5" width="60" height="60"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="dax-ZR-tTf"/>
@@ -28,16 +28,16 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tvn-EC-pg5">
-                        <rect key="frame" x="76" y="8" width="236" height="58.5"/>
+                        <rect key="frame" x="76" y="8" width="236" height="66.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-fP-gyA">
-                                <rect key="frame" x="0.0" y="0.0" width="236" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="236" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-Ny-H8N">
-                                <rect key="frame" x="0.0" y="38" width="236" height="20.5"/>
+                                <rect key="frame" x="0.0" y="46" width="236" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                 <constraints>
                     <constraint firstItem="WLM-T8-PtJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="11d-OM-TT8"/>
                     <constraint firstItem="Tvn-EC-pg5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1Vo-u8-oOl"/>
-                    <constraint firstAttribute="bottom" secondItem="WLM-T8-PtJ" secondAttribute="bottom" constant="8" id="G60-yW-boB"/>
+                    <constraint firstAttribute="bottom" secondItem="WLM-T8-PtJ" secondAttribute="bottom" priority="750" constant="8" id="G60-yW-boB"/>
                     <constraint firstAttribute="bottom" secondItem="Tvn-EC-pg5" secondAttribute="bottom" constant="8" id="MMK-43-XoM"/>
                     <constraint firstAttribute="trailing" secondItem="Tvn-EC-pg5" secondAttribute="trailing" constant="8" id="NiC-T5-hiK"/>
                     <constraint firstItem="WLM-T8-PtJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZAT-rI-p4u"/>
