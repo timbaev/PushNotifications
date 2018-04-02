@@ -18,6 +18,6 @@ protocol DetailNotificationInteractorOutput: class {
     /// Finish dowload image from url
     ///
     /// - Parameter result: result of downloading
-    func didFinishImageDownload(with result: EnumResult<ImageModel?>)
+    func didFinishImageDownload(with result: Result<ImageModel?>)
     
 }

@@ -49,7 +49,7 @@ class DetailNotificationPresenter: DetailNotificationViewOutput, DetailNotificat
         }
     }
     
-    func didFinishImageDownload(with result: EnumResult<ImageModel?>) {
+    func didFinishImageDownload(with result: Result<ImageModel?>) {
         switch result {
         case .success(let imageModel):
             guard let image = imageModel?.image else {

@@ -13,6 +13,6 @@ protocol LastImageInteractorOutput: class {
     /// Finish loading of image
     ///
     /// - Parameter result: enum with results
-    func didFinishLoadImage(with result: EnumResult<ImageModel>)
+    func didFinishLoadImage(with result: Result<ImageModel>)
     
 }

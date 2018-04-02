@@ -22,7 +22,7 @@ class LastImagePresenter: LastImageViewOutput, LastImageInteractorOutput {
     
     //MARK: - Interactor output
     
-    func didFinishLoadImage(with result: EnumResult<ImageModel>) {
+    func didFinishLoadImage(with result: Result<ImageModel>) {
         switch result {
         case .success(let imageModel):
             view.set(lastImage: imageModel.image)

@@ -13,7 +13,7 @@ protocol NotificationTableInteractorOutput: class {
     /// Result of receiving notifications
     ///
     /// - Parameter result: result
-    func didFinishingToGetNotifications(with result: Result<NotificationCellModel>)
+    func didFinishingToGetNotifications(with result: ArrayResult<NotificationCellModel>)
     
     /// Finish loading image from URL
     ///

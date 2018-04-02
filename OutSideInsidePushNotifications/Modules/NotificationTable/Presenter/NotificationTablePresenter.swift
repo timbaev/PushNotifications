@@ -45,7 +45,7 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
  
     // MARK: - Interactor output implementation
     
-    func didFinishingToGetNotifications(with result: Result<NotificationCellModel>) {
+    func didFinishingToGetNotifications(with result: ArrayResult<NotificationCellModel>) {
         switch result {
         case .success(let notifications):
             view.setCellModels(with: notifications)
