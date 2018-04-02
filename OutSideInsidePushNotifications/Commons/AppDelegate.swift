@@ -14,16 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var notificationManager: NotificationManager?
+    var notificationsNavControllerIndex = 1
+    var showDetailSegueIdentifier = "showDetailScreen"
+    var indexOfNewNotification = 0
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         notificationManager = NotificationManagerImplementation(databaseManager: RealmNotificationDatabaseManager())
             
         registerForNotifications()
-        
-        if let option = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: Any] {
-            notificationManager?.reciveNotification(with: option)
-        }
         
         return true
     }
@@ -84,6 +83,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         guard let dataInfo = userInfo as? [String: Any] else { return }
         notificationManager?.reciveNotification(with: dataInfo)
+        
+        if application.applicationState != .active {
+            guard let topController = application.keyWindow?.rootViewController as? UITabBarController else { return }
+            let notificationsNavController = topController.viewControllers?[notificationsNavControllerIndex] as? UINavigationController
+            let notificationsViewController = notificationsNavController?.topViewController as? NotificationTableViewController
+            notificationsViewController?.performSegue(withIdentifier: showDetailSegueIdentifier, sender: indexOfNewNotification)
+        }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
