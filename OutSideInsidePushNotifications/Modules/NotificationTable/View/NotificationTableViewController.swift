@@ -39,6 +39,11 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
         presenter.viewDidAppear()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let moduleHolder = segue.destination as? ModuleInputHolder else { return }
+        moduleHolder.moduleInput?.setData(sender)
+    }
+    
     //MARK: - View input implementation
     
     func setCellModels(with notificationModels: [CellModel]) {
@@ -76,6 +81,10 @@ extension NotificationTableViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectNotification(at: indexPath)
     }
     
 }

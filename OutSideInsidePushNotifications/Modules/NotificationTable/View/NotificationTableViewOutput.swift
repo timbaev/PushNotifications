@@ -18,4 +18,9 @@ protocol NotificationTableViewOutput: class {
     
     /// Logic when the view became the background
     func viewDidAppear()
+    
+    /// Select notification
+    ///
+    /// - Parameter indexPath: at index path
+    func didSelectNotification(at indexPath: IndexPath)
 }

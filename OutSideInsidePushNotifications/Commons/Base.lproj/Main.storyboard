@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" title="Уведомления" id="fde-Qu-Puv"/>
                     <connections>
                         <outlet property="tableView" destination="yJN-ZG-9ki" id="UV3-Qn-CJj"/>
-                        <segue destination="Ug8-06-cW8" kind="show" id="qPL-ad-RWy"/>
+                        <segue destination="Ug8-06-cW8" kind="show" identifier="showDetailScreen" id="qPL-ad-RWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO8-S6-CFM" userLabel="First Responder" sceneMemberID="firstResponder"/>

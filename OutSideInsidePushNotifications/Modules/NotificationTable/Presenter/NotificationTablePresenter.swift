@@ -11,7 +11,7 @@ import Foundation
 class NotificationTablePresenter: NotificationTableViewOutput, NotificationTableInteractorOutput {
 
     weak var view: NotificationTableViewInput!
-    weak var router: NotificationTableRouterInput!
+    var router: NotificationTableRouterInput!
     var interactor: NotificationTableInteractorInput!
     
     // MARK: - View output implementation
@@ -29,6 +29,10 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
 
     func getNotifications() {
         interactor.getNotifications()
+    }
+    
+    func didSelectNotification(at indexPath: IndexPath) {
+        router.showDetailScreen(with: indexPath.row)
     }
  
     // MARK: - Interactor output implementation

@@ -10,4 +10,9 @@ import Foundation
 
 protocol NotificationTableRouterInput: class {
     
+    /// Show detail notification screen
+    ///
+    /// - Parameter index: index of model
+    func showDetailScreen(with index: Int)
+    
 }
