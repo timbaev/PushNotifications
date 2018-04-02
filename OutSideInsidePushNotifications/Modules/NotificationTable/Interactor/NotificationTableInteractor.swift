@@ -16,7 +16,15 @@ class NotificationTableInteractor: NotificationTableInteractorInput {
     
     //MARK: - Interactor input implementation
     
-    func getNotifications() {
+    func subscripeToNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(getNotifications), name: .reloadNotifications)
+    }
+    
+    func unsubscripeFromNotifications() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func getNotifications() {
         guard let notifications = notificationDataBaseManager.getAll() else { return  }
         let notificationsCellModel = notifications.map {
             NotificationCellModel(text: $0.text, title: $0.title, imageURL: $0.imageURL)

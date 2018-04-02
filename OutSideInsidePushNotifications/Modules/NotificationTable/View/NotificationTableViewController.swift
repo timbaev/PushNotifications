@@ -16,7 +16,6 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     
     let notificationCellIdentifier = "notificationCell"
     let notificationCellNibIdentifier = "NotificationTableViewCell"
-    let cellHeight = CGFloat(89)
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -28,15 +27,26 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
         return refreshControl
     }()
     
+    //MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         presenter.viewIsReady()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         presenter.viewDidAppear()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.subscripeToNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.unsubscripeFromNotifications()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

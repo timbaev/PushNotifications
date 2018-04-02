@@ -82,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if application.applicationState == .active {
             notificationManager?.reciveNotification(with: dataInfo, show: true)
+            NotificationCenter.default.post(name: .reloadNotifications)
         } else {
             notificationManager?.reciveNotification(with: dataInfo, show: false)
             NotificationCenter.default.post(name: .pushHandler)

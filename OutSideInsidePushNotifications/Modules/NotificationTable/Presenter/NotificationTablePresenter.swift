@@ -34,6 +34,14 @@ class NotificationTablePresenter: NotificationTableViewOutput, NotificationTable
     func didSelectNotification(at indexPath: IndexPath) {
         router.showDetailScreen(with: indexPath.row)
     }
+    
+    func subscripeToNotifications() {
+        interactor.subscripeToNotifications()
+    }
+    
+    func unsubscripeFromNotifications() {
+        interactor.unsubscripeFromNotifications()
+    }
  
     // MARK: - Interactor output implementation
     

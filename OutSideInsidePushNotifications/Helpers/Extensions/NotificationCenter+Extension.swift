@@ -12,6 +12,7 @@ extension NotificationCenter {
     
     enum NotificationNames: String {
         case pushHandler
+        case reloadNotifications
     }
     
     func post(name notificationName: NotificationNames, object: Any? = nil) {

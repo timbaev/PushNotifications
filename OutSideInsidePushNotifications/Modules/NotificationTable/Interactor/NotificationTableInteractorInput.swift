@@ -19,4 +19,10 @@ protocol NotificationTableInteractorInput: class {
     ///   - url: URL of image
     ///   - indexPath: index of cell
     func downloadImage(from url: URL, at indexPath: IndexPath)
+    
+    /// Handle new push notifications
+    func subscripeToNotifications()
+    
+    /// Stop handling new push notification
+    func unsubscripeFromNotifications()
 }
