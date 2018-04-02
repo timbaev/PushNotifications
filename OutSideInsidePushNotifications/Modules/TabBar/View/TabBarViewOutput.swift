@@ -10,10 +10,8 @@ import Foundation
 
 protocol TabBarViewOutput: class {
     
-    /// Subscribe to notification with name
-    ///
-    /// - Parameter name: notification name
-    func registerNotification(with name: String)
+    /// Subscribe to notification
+    func registerNotification()
     
     /// Unsubscribe notification
     func unregisterNotifications()

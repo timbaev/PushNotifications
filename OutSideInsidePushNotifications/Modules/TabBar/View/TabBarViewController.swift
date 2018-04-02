@@ -18,10 +18,7 @@ class TabBarViewController: UITabBarController, TabBarViewInput {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let notificationName = appDelegate.notificationName
-        
-        presenter.registerNotification(with: notificationName)
+        presenter.registerNotification()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

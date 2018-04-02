@@ -12,8 +12,8 @@ class TabBarInteractor: TabBarInteractorInput {
     
     weak var presenter: TabBarInteractorOutput!
     
-    func registerNotification(with name: String) {
-        NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification), name: .init(name), object: nil)
+    func registerNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification), name: .pushHandler)
     }
     
     func removeObserver() {

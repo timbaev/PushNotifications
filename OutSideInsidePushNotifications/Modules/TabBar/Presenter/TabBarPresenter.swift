@@ -22,8 +22,8 @@ class TabBarPresenter: TabBarViewOutput, TabBarInteractorOutput {
         router.showDeatilScreen(with: firstNotificationIndex)
     }
     
-    func registerNotification(with name: String) {
-        interactor.registerNotification(with: name)
+    func registerNotification() {
+        interactor.registerNotification()
     }
     
     func unregisterNotifications() {

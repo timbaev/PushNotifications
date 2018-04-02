@@ -60,6 +60,7 @@
 		CB82582920723983000B0E65 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582820723983000B0E65 /* TabBarInteractor.swift */; };
 		CB82582B2072399C000B0E65 /* TabBarInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */; };
 		CB82582D207239BA000B0E65 /* TabBarInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */; };
+		CB825830207281AD000B0E65 /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */; };
 		FF200884206D4E32004E41DF /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200883206D4E32004E41DF /* NotificationTableViewController.swift */; };
 		FF200887206D564F004E41DF /* NotificationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200886206D564F004E41DF /* NotificationTableDataSource.swift */; };
 		FF20088B206D5736004E41DF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF200889206D5736004E41DF /* NotificationTableViewCell.swift */; };
@@ -169,6 +170,7 @@
 		CB82582820723983000B0E65 /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
 		CB82582A2072399C000B0E65 /* TabBarInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorInput.swift; sourceTree = "<group>"; };
 		CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractorOutput.swift; sourceTree = "<group>"; };
+		CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		CD4F0C6D923E1409A0CC70A9 /* Pods-OutSideInsidePushNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutSideInsidePushNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutSideInsidePushNotifications/Pods-OutSideInsidePushNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		D5F970D62A6C1421F0445739 /* Pods_OutSideInsidePushNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutSideInsidePushNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF200883206D4E32004E41DF /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 		CB640AF1206937370067F3C2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB82582E20728194000B0E65 /* Extensions */,
 				CB11EE602070EF270035AF09 /* EnumResult */,
 				CB24287C20699A8E00261482 /* NotificationView */,
 				CB2428762069961200261482 /* ModuleInput */,
@@ -574,6 +577,14 @@
 				CB82582C207239BA000B0E65 /* TabBarInteractorOutput.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB82582E20728194000B0E65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CFDE61CFFB4266C4F1254880 /* Pods */ = {
@@ -892,6 +903,7 @@
 				CB825802207181C5000B0E65 /* DetailNotificationPresenter.swift in Sources */,
 				FF200894206D6159004E41DF /* NotificationTableViewOutput.swift in Sources */,
 				CB825804207181DB000B0E65 /* DetailNotificationInteractor.swift in Sources */,
+				CB825830207281AD000B0E65 /* NotificationCenter+Extension.swift in Sources */,
 				FF2008A2206DA679004E41DF /* NotificationTablePresenter.swift in Sources */,
 				CB11EE562070D2D20035AF09 /* LastImageRouterInput.swift in Sources */,
 				CB11EE522070D2990035AF09 /* LastImageInteractorOutput.swift in Sources */,

@@ -14,10 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var notificationManager: NotificationManager?
-    var notificationsNavControllerIndex = 1
-    var showDetailSegueIdentifier = "showDetailScreen"
-    var indexOfNewNotification = 0
-    var notificationName = "newPushNotif"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -83,10 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("--- Notification received ---")
         
         guard let dataInfo = userInfo as? [String: Any] else { return }
-        notificationManager?.reciveNotification(with: dataInfo)
         
-        if application.applicationState != .active {
-            NotificationCenter.default.post(name: .init(notificationName), object: nil)
+        if application.applicationState == .active {
+            notificationManager?.reciveNotification(with: dataInfo, show: true)
+        } else {
+            notificationManager?.reciveNotification(with: dataInfo, show: false)
+            NotificationCenter.default.post(name: .pushHandler)
         }
     }
     
