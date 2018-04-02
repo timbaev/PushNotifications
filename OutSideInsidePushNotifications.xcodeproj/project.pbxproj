@@ -247,6 +247,7 @@
 		7CAC194C2067F21300B38ACE /* OutSideInsidePushNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				CB8258362072B922000B0E65 /* TableView */,
 				CB32D0B8206D9DAF004379D7 /* OutSideInsidePushNotifications.entitlements */,
 				CB648DEB206AEDFC00009C23 /* Entities */,
 				CB648DE5206AECC400009C23 /* Managers */,
@@ -338,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				CB11EE612070EF8E0035AF09 /* EnumResult.swift */,
+				FF20137B206EF65800EE01AB /* Result.swift */,
 			);
 			path = EnumResult;
 			sourceTree = "<group>";
@@ -587,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				CB82582F207281AD000B0E65 /* NotificationCenter+Extension.swift */,
+				FF20137A206EF65800EE01AB /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,6 +601,31 @@
 				CB8258342072B5D6000B0E65 /* DeleteRowDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CB8258362072B922000B0E65 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				CB8258382072B93E000B0E65 /* Datasources */,
+				CB8258372072B92E000B0E65 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		CB8258372072B92E000B0E65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FF200888206D5713004E41DF /* NotificationCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CB8258382072B93E000B0E65 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				FF200885206D55CB004E41DF /* NotificationDataSource */,
+			);
+			path = Datasources;
 			sourceTree = "<group>";
 		};
 		CFDE61CFFB4266C4F1254880 /* Pods */ = {
@@ -612,10 +640,7 @@
 		FF20087D206D4CFA004E41DF /* NotificationTable */ = {
 			isa = PBXGroup;
 			children = (
-				FF201379206EF65800EE01AB /* Helpers */,
 				FF2008A9206DA79B004E41DF /* Configurator */,
-				FF200888206D5713004E41DF /* NotificationCell */,
-				FF200885206D55CB004E41DF /* DataSource */,
 				FF200882206D4D2B004E41DF /* Router */,
 				FF200881206D4D23004E41DF /* Entities */,
 				FF200880206D4D1D004E41DF /* Presenter */,
@@ -671,14 +696,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		FF200885206D55CB004E41DF /* DataSource */ = {
+		FF200885206D55CB004E41DF /* NotificationDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				CB8258332072B5A6000B0E65 /* Delegates */,
 				FF200899206D8370004E41DF /* NotificationTableDataSourceInput.swift */,
 				FF200886206D564F004E41DF /* NotificationTableDataSource.swift */,
 			);
-			path = DataSource;
+			path = NotificationDataSource;
 			sourceTree = "<group>";
 		};
 		FF200888206D5713004E41DF /* NotificationCell */ = {
@@ -697,15 +722,6 @@
 				FF2008AC206DA9DA004E41DF /* NotificationTableInitializer.swift */,
 			);
 			path = Configurator;
-			sourceTree = "<group>";
-		};
-		FF201379206EF65800EE01AB /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				FF20137A206EF65800EE01AB /* UIImageViewExtension.swift */,
-				FF20137B206EF65800EE01AB /* Result.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FF8A1738206C287500242631 /* NotificationManager */ = {
