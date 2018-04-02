@@ -25,4 +25,9 @@ protocol NotificationTableInteractorInput: class {
     
     /// Stop handling new push notification
     func unsubscripeFromNotifications()
+    
+    /// Delete notification from database
+    ///
+    /// - Parameter index: index of notification cell
+    func deleteNotification(with index: Int)
 }

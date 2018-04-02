@@ -52,6 +52,19 @@ class RealmNotificationDatabaseManager: NotificationDatabaseManager {
         }
     }
     
+    func delete(at index: Int) {
+        guard let realm = self.realm else { return }
+        do {
+            try realm.write {
+                let notificationsRealm = realm.objects(NotificationRealm.self).sorted(byKeyPath: #keyPath(NotificationRealm.created), ascending: false)
+                realm.delete(notificationsRealm[index])
+            }
+        } catch {
+            print("!!! Error delete notification model !!!")
+            print(error.localizedDescription)
+        }
+    }
+    
     func get(at index: Int) -> NotificationModel? {
         guard let realm = self.realm else { return nil }
         let notificationsRealm = realm.objects(NotificationRealm.self).sorted(byKeyPath: #keyPath(NotificationRealm.created), ascending: false)

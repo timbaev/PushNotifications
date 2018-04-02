@@ -72,6 +72,7 @@ class NotificationTableViewController: UIViewController, NotificationTableViewIn
     func connectTableWithDataSource() {
         tableView.dataSource = inputDataSource
         inputDataSource.downloadImageDelegate = presenter as? DownloadImageDelegate
+        inputDataSource.deleteRowDelegate = presenter as? DeleteRowDelegate
     }
     
     func setTableViewArguments() {

@@ -13,6 +13,7 @@ import UIKit
 protocol NotificationTableDataSourceInput: UITableViewDataSource {
     
     var downloadImageDelegate: DownloadImageDelegate? { get set }
+    var deleteRowDelegate: DeleteRowDelegate? { get set }
     
     /// Set all notifications in data source
     ///

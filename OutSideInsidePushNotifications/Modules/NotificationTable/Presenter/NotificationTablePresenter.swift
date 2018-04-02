@@ -67,5 +67,11 @@ extension NotificationTablePresenter: DownloadImageDelegate {
     func downloadImage(for url: URL, at indexPath: IndexPath) {
         interactor.downloadImage(from: url, at: indexPath)
     }
+}
+
+extension NotificationTablePresenter: DeleteRowDelegate {
     
+    func didDeleteRow(at indexPath: IndexPath) {
+        interactor.deleteNotification(with: indexPath.row)
+    }
 }

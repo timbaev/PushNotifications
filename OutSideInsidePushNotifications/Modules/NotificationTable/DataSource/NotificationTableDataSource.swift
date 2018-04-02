@@ -12,6 +12,7 @@ class NotificationTableDataSource: NSObject, NotificationTableDataSourceInput {
 
     var cellModels: [CellModel]?
     var downloadImageDelegate: DownloadImageDelegate?
+    var deleteRowDelegate: DeleteRowDelegate?
     let notificationCellIdentifier = "notificationCell"
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +34,18 @@ class NotificationTableDataSource: NSObject, NotificationTableDataSourceInput {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            cellModels?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            deleteRowDelegate?.didDeleteRow(at: indexPath)
+        }
     }
   
     func setCurrentNotification(with notifications: [CellModel]? ) {

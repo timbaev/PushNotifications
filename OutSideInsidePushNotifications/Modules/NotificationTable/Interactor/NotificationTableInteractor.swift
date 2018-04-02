@@ -44,4 +44,8 @@ class NotificationTableInteractor: NotificationTableInteractorInput {
         }
     }
     
+    func deleteNotification(with index: Int) {
+        notificationDataBaseManager.delete(at: index)
+    }
+    
 }
