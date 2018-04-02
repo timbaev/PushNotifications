@@ -21,10 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         registerForNotifications()
         
-        if let option = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: Any] {
-            notificationManager?.reciveNotification(with: option)
-        }
-        
         return true
     }
 
@@ -83,7 +79,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("--- Notification received ---")
         
         guard let dataInfo = userInfo as? [String: Any] else { return }
-        notificationManager?.reciveNotification(with: dataInfo)
+        
+        if application.applicationState == .active {
+            notificationManager?.reciveNotification(with: dataInfo, show: true)
+        } else {
+            notificationManager?.reciveNotification(with: dataInfo, show: false)
+            NotificationCenter.default.post(name: .pushHandler)
+        }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

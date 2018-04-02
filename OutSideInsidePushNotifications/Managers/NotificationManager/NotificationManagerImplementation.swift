@@ -16,7 +16,7 @@ class NotificationManagerImplementation: NotificationManager {
         self.databaseManager = databaseManager
     }
     
-    func reciveNotification(with option: [String: Any]) {
+    func reciveNotification(with option: [String: Any], show: Bool) {
         
         guard let jsonData = try? JSONSerialization.data(withJSONObject: option, options: .prettyPrinted) else { return }
         guard let notificationModel = try? JSONDecoder().decode(NotificationModel.self, from: jsonData) else { return }
@@ -24,6 +24,7 @@ class NotificationManagerImplementation: NotificationManager {
         databaseManager.create(notificationModel)
         print("--- Notification parsed and will be save ---")
         
+        guard show else { return }
         if var topController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController

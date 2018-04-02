@@ -58,7 +58,7 @@ class NotificationView: UIView {
     }
     
     @objc private func handleTap(gesture: UIGestureRecognizer) {
-        //Do something
+        NotificationCenter.default.post(name: .pushHandler)
         hideAnimate()
     }
     

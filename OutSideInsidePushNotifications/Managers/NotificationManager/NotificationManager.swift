@@ -13,6 +13,8 @@ protocol NotificationManager {
     
      /// To recive notification and create notification model to save to the database
      ///
-     /// - Parameter option: remote notification from [UIApplicationLaunchOptionsKey: Any]
-     func reciveNotification(with option: [String: Any])
+     /// - Parameters:
+     ///   - option: remote notification from [UIApplicationLaunchOptionsKey: Any]
+     ///   - show: show in app notification
+     func reciveNotification(with option: [String: Any], show: Bool)
 }
